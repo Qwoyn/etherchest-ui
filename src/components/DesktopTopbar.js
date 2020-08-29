@@ -64,7 +64,19 @@ export default function DesktopTopbar(){
     <Grid item xs={6}>
         <Grid container spacing={0}>
             
-            
+            <Grid item xs={1}>
+            <HtmlTooltip
+              title={
+                <React.Fragment>
+                  <Typography color="error" className={classes.font}>Find your staking information</Typography>
+                </React.Fragment>
+              }
+              placement="top"
+              TransitionComponent={Zoom}
+              >
+            <Typography color="error" className={classes.font}>Welcome to your Dashboard</Typography>
+            </HtmlTooltip>
+            </Grid>
 
             {/*<Grid item xs={1}>
             <HtmlTooltip
