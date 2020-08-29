@@ -136,7 +136,7 @@ class App extends Component {
   }
 
   onToggleMenu(event) {
-    this.menuClick = true;
+    this.menuClick = false;
 
     if (this.isDesktop()) {
       if (this.state.layoutMode === "overlay") {
