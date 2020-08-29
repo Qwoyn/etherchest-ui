@@ -19,6 +19,7 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import { slideInRight } from 'react-animations';
 import Radium, {StyleRoot} from 'radium';
 import Box from '@material-ui/core/Box';
+import Button from '@material-ui/core/Button';
  
 const styles = {
   slideInRight: {
@@ -40,7 +41,7 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: "#000E0E",
   },
   font: {
-    fontFamily: '"Jua", sans-serif',
+    fontFamily: '"Orbitron", sans-serif',
   },
   root: {
     width: '100%',
@@ -237,7 +238,6 @@ export const HashkingsTemplate = () => {
       }
     }, [username]);
 
-if (username) {
    return (
     <div className={classes.flex}>
       <div className={classes.flex}>
@@ -247,26 +247,20 @@ if (username) {
       <Paper className={classes.paper}>
            <ThemeProvider theme={theme}>
                 <Typography gutterBottom variant="h5" component="h5">
-            <b><font color="DFB17B" className={classes.font}>Grow Journal</font></b>
+            <b><font color="DFB17B" className={classes.font}>Deposit History</font></b>
           </Typography>
                   </ThemeProvider>
-                  <HtmlTooltip
-                  title={
-                    <React.Fragment>
-                      <Typography color="error" className={classes.font}><u>Plot Progress</u></Typography>
-                      <em><a href="/market/seedbank">{"Find out how far along your plants are."}</a></em> <b>{"Is it time to Harvest?"}</b>
-                    </React.Fragment>
-                  }
-                  placement="left-start"
-                  TransitionComponent={Zoom}
-                  >
-           <ExpansionPanel className={classes.expansion}>
+                  
+           
         <ExpansionPanelSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel2a-content"
           id="panel2a-header" 
+          
         >
-        <Typography className={classes.heading}><font color="DFB17B" className={classes.font}>Progress</font></Typography>
+         <Button variant="contained" color="primary">
+        Make a Deposit
+      </Button>
         </ExpansionPanelSummary>
         <ExpansionPanelDetails className={classes.expansion}>
         <DataTable
@@ -274,12 +268,12 @@ if (username) {
                 loading={loading}
                 className={classes.font}
                 responsive={true}
-                emptyMessage="Please plant some seeds or visit our market to get more plots"                
+                emptyMessage="You haven't purchased any NFTs"                
               >
-                <Column field="id" header="Plot #" className={classes.font} sortable={false} style={{width:'20%', backgroundColor:"#DFB17B", color:'#000000'}} />
+                <Column field="id" header="Type" className={classes.font} sortable={false} style={{width:'20%', backgroundColor:"#DFB17B", color:'#000000'}} />
                 <Column
                   field="strain"
-                  header="Strain"
+                  header="Maturity"
                   sortable={false}
                   body={({ strain }) => seedNames[strain]}
                   style={{width:'20%', backgroundColor:"#DFB17B", color:'#000000'}}
@@ -287,7 +281,7 @@ if (username) {
                 />
                 <Column
                   field="stage"
-                  header="Growth Stage"
+                  header="Price"
                   sortable={false}
                   style={{backgroundColor:"#DFB17B", color:'#000000'}}
                   className={classes.font}
@@ -315,10 +309,9 @@ if (username) {
               </DataTable>
         </ExpansionPanelDetails>
         <Typography className={classes.font}><font color="red">
-        Please allow 24 hours for your harvested plots to reset</font></Typography>
+        If you do not see your deposit(s) please check the beacon chain explorer</font></Typography>
         <br/>
-      </ExpansionPanel>
-      </HtmlTooltip>
+  
       <br/>
 
       
@@ -380,12 +373,6 @@ if (username) {
       </div>
     </div>
       )
-
-  } else {
-    return (
-    <Redirect to='/login'/>
-    );
-  }
 };
 
 export default withRouter(HashkingsTemplate);

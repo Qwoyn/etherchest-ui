@@ -117,7 +117,7 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: "#260518",
   },
   font: {
-    fontFamily: '"Jua", sans-serif',
+    fontFamily: '"Orbitron", sans-serif',
     color: "#DFB17B"
   },
   tabs: {
@@ -129,6 +129,12 @@ const useStyles = makeStyles(theme => ({
   },
   background: {
     backgroundColor: "#073232"
+  },
+  title: {
+    flexGrow: 1,
+    alignSelf: 'flex-start',
+    fontFamily: '"Orbitron", sans-serif',
+    color: "#DFB17B"
   },
 }));
 
@@ -259,7 +265,10 @@ export const GardenActions = () => {
           <div style={styles.slideInLeft2}>
           <Grid container spacing={1}>
           <Grid item xs={5}>
-          <AppBar position="static">
+          <AppBar position="static" color='transparent'>
+          <Typography className={classes.title} variant="h5">
+            Owned NFTs
+          </Typography>
         <Tabs
           value={value}
           onChange={handleChange}
@@ -268,9 +277,9 @@ export const GardenActions = () => {
           aria-label="scrollable prevent tabs example"
           className={classes.background}
         >
-          <Tab icon={<FarmingIcon />} aria-label="phone" {...a11yProps(0)} />
-          <Tab icon={<CraftingIcon />} aria-label="favorite" {...a11yProps(1)} />
-          <Tab icon={<GiftIcon />} aria-label="person" {...a11yProps(2)} />
+          <Tab icon={<FarmingIcon />} aria-label="cubby" {...a11yProps(0)} />
+          <Tab icon={<CraftingIcon />} aria-label="drawer" {...a11yProps(1)} />
+          <Tab icon={<GiftIcon />} aria-label="chest" {...a11yProps(2)} />
         </Tabs>
       </AppBar>      
       <TabPanel value={value} index={0}>
@@ -278,133 +287,18 @@ export const GardenActions = () => {
             <Box boxShadow={4}>
               <Paper className={classes.paperBrown}>
             <ThemeProvider theme={theme}>
-            <HtmlTooltip
-              title={
-                <React.Fragment>
-                  <Typography color="error" className={classes.font}><u>Plant, Water and Harvest </u></Typography>
-                  <em><a href="/market/seedbank">{"This is where you perform your main tasks."}</a></em> <b>{"Don't forget to check the progress!"}</b>
-                </React.Fragment>
-              }
-              placement="top"
-              TransitionComponent={Zoom}
-              >
+            
               <Typography gutterBottom variant="h3" component="h3" className={classes.font}>
-                Farming
+                Cubbys
                 </Typography>
-                </HtmlTooltip>
+
                 </ThemeProvider>
                 <hr/>
                 </Paper>
                 </Box>
               </Grid>
               
-              <Grid item xs={12}>
-              <Box boxShadow={4}>
-                <Paper className={classes.paperBrown}>
-              <ThemeProvider theme={theme}>
-                <HtmlTooltip
-                title={
-                  <React.Fragment>
-                    <Typography color="error" className={classes.font}><u>Planting</u></Typography>
-                    <em><a href="/market/seedbank">{"Did you get seeds?"}</a></em> <b>{"plant some Crops!"}</b>
-                  </React.Fragment>
-                }
-                placement="left"
-                TransitionComponent={Zoom}
-                >
-                <Fab
-                  variant="contained" 
-                  color="primary"
-                  onClick={() => setPlantSeedModal(!plantSeedModal)}
-                  className={classes.button}
-                ><GerminateIcon />
-                </Fab>
-                </HtmlTooltip>
-              </ThemeProvider>
-                </Paper>
-                </Box>
-              </Grid>
-
-              <Grid item xs={12}>
-              <Box boxShadow={4}>
-                <Paper className={classes.paperBrown}>
-              <ThemeProvider theme={theme}>
-              <HtmlTooltip
-                title={
-                  <React.Fragment>
-                    <Typography color="error" className={classes.font}><u>Water</u></Typography>
-                    <em><a href="/market/seedbank">{"Your Plants might be thirsty!"}</a></em> <b>{"Give them some water."}</b>
-                  </React.Fragment>
-                  }
-                  placement="right"
-                  TransitionComponent={Zoom}
-                  >
-                  <Fab
-                    variant="contained" 
-                    color="primary"
-                    onClick={() => setWaterModal(!waterModal)}
-                    className={classes.button}
-                  ><WaterIcon />
-                  </Fab>
-                  </HtmlTooltip>
-                  </ThemeProvider>
-                  </Paper>
-                  </Box>
-                  </Grid>
-
-                  <Grid item xs={12}>
-              <Box boxShadow={4}>
-                <Paper className={classes.paperBrown}>
-              <ThemeProvider theme={theme}>
-                <HtmlTooltip
-                title={
-                  <React.Fragment>
-                    <Typography color="error" className={classes.font}><u>Pollinate</u></Typography>
-                    <em><a href="/market/seedbank">{"Breed your own Hybrid?"}</a></em> <b>{"Use some pollen to breed!"}</b>
-                  </React.Fragment>
-                }
-                placement="left"
-                TransitionComponent={Zoom}
-                >
-                <Fab
-                  variant="contained" 
-                  color="primary"
-                  onClick={() => setPollinateSeedModal(!pollinateSeedModal)}
-                  className={classes.button}
-                ><PollinateIcon />
-                </Fab>
-                </HtmlTooltip>
-              </ThemeProvider>
-                </Paper>
-                </Box>
-              </Grid>
-
-                  <Grid item xs={12}>
-                  <Box boxShadow={4}>
-                  <Paper className={classes.paperBrown}>            
-                    <ThemeProvider theme={theme}>
-                    <HtmlTooltip
-                        title={
-                          <React.Fragment>
-                            <Typography color="error" className={classes.font}><u>Harvest</u></Typography>
-                            <em><a href="/market/seedbank">{"Are those buds nice and ripe?"}</a></em> <b>{"Harvest when they are ready."}</b>
-                          </React.Fragment>
-                        }
-                        placement="top"
-                        TransitionComponent={Zoom}
-                        >
-                        <Fab
-                          variant="contained" 
-                          color="primary"
-                          onClick={() => setHarvestModal(!harvestModal)}
-                          className={classes.button}
-                        ><HarvestIcon />
-                        </Fab>
-                        </HtmlTooltip>
-                        </ThemeProvider>
-                        </Paper>
-                        </Box>
-                        </Grid>
+              
                         </TabPanel>
 
                         <TabPanel value={value} index={1}>
@@ -423,108 +317,7 @@ export const GardenActions = () => {
               TransitionComponent={Zoom}
               >
               <Typography gutterBottom variant="h3" component="h3" className={classes.font}>
-                Crafting
-                </Typography>
-                </HtmlTooltip>
-                </ThemeProvider>
-                <hr/>
-                </Paper>
-                </Box>
-              </Grid>
-<br/>
-              <Grid item xs={12}>
-            <Box boxShadow={4}>
-              <Paper className={classes.paperBrown}>
-            <ThemeProvider theme={theme}>
-            <HtmlTooltip
-              title={
-                <React.Fragment>
-                  <Typography color="error" className={classes.font}><u>Kief and Oil </u></Typography>
-                </React.Fragment>
-              }
-              placement="top"
-              TransitionComponent={Zoom}
-              >
-              <Typography gutterBottom variant="h5" component="h5" className={classes.font}>
-                Hashish
-                </Typography>
-                </HtmlTooltip>
-                </ThemeProvider>
-                <hr/>
-                </Paper>
-                </Box>
-              </Grid>
-        
-              <Grid item xs={12}>
-              <Box boxShadow={4}>
-                <Paper className={classes.paperBrown}>
-              <ThemeProvider theme={theme}>
-                <HtmlTooltip
-                title={
-                  <React.Fragment>
-                    <Typography color="error" className={classes.font}><u>Craft Kief</u></Typography>
-                    <b>{"Use kief to craft moonrocks or dipped joints!"}</b>
-                  </React.Fragment>
-                }
-                placement="left"
-                TransitionComponent={Zoom}
-                >
-                <Fab
-                  variant="contained" 
-                  color="primary"
-                  onClick={() => setCraftKiefModal(!craftKiefModal)}
-                  className={classes.button}
-                ><CrystalIcon />
-                </Fab>
-                </HtmlTooltip>
-              </ThemeProvider>
-                </Paper>
-                </Box>
-              </Grid>
-              
-
-              <Grid item xs={12}>
-              <Box boxShadow={4}>
-                <Paper className={classes.paperBrown}>
-              <ThemeProvider theme={theme}>
-                <HtmlTooltip
-                title={
-                  <React.Fragment>
-                    <Typography color="error" className={classes.font}><u>Craft Oil</u></Typography>
-                    <b>{"Use some Hashoil to create dipped joints or cannagars!"}</b>
-                  </React.Fragment>
-                }
-                placement="left"
-                TransitionComponent={Zoom}
-                >
-                <Fab
-                  variant="contained" 
-                  color="primary"
-                  onClick={() => setCraftOilModal(!craftOilModal)}
-                  className={classes.button}
-                ><OilIcon />
-                </Fab>
-                </HtmlTooltip>
-              </ThemeProvider>
-                </Paper>
-                </Box>
-              </Grid>
-<br/>
-              <Grid item xs={12}>
-            <Box boxShadow={4}>
-              <Paper className={classes.paperBrown}>
-            <ThemeProvider theme={theme}>
-            <HtmlTooltip
-              title={
-                <React.Fragment>
-                  <Typography color="error" className={classes.font}><u>Smoke these with your friends </u></Typography>
-                </React.Fragment>
-              }
-              placement="top"
-              TransitionComponent={Zoom}
-              >
-              <Typography gutterBottom variant="h5" component="h5" className={classes.font}>
-                Consumables
+                Drawers
                 </Typography>
                 </HtmlTooltip>
                 </ThemeProvider>
@@ -533,115 +326,7 @@ export const GardenActions = () => {
                 </Box>
               </Grid>
 
-              <Grid item xs={12}>
-              <Box boxShadow={4}>
-                <Paper className={classes.paperBrown}>
-              <ThemeProvider theme={theme}>
-                <HtmlTooltip
-                title={
-                  <React.Fragment>
-                    <Typography color="error" className={classes.font}><u>Roll a Joint</u></Typography>
-                    <b>{"Roll a Joint and smoke it with your friends to gain XP"}</b>
-                  </React.Fragment>
-                }
-                placement="left"
-                TransitionComponent={Zoom}
-                >
-                <Fab
-                  variant="contained" 
-                  color="primary"
-                  onClick={() => setCraftJointModal(!craftJointModal)}
-                  className={classes.button}
-                ><JointIcon />
-                </Fab>
-                </HtmlTooltip>
-              </ThemeProvider>
-                </Paper>
-                </Box>
-              </Grid>
-
-              <Grid item xs={12}>
-              <Box boxShadow={4}>
-                <Paper className={classes.paperBrown}>
-              <ThemeProvider theme={theme}>
-                <HtmlTooltip
-                title={
-                  <React.Fragment>
-                    <Typography color="error" className={classes.font}><u>Roll a Blunt</u></Typography>
-                    <b>{"Roll a Blunt and smoke it with your friends to gain XP"}</b>
-                    </React.Fragment>
-                }
-                placement="left"
-                TransitionComponent={Zoom}
-                >
-                <Fab
-                  variant="contained" 
-                  color="primary"
-                  onClick={() => setCraftBluntModal(!craftBluntModal)}
-                  className={classes.button}
-                ><BluntIcon />
-                </Fab>
-                </HtmlTooltip>
-              </ThemeProvider>
-                </Paper>
-                </Box>
-              </Grid>
-
-              <Grid item xs={12}>
-              <Box boxShadow={4}>
-                <Paper className={classes.paperBrown}>
-              <ThemeProvider theme={theme}>
-                <HtmlTooltip
-                title={
-                  <React.Fragment>
-                    <Typography color="error" className={classes.font}><u>Craft a Dipped Joint<font color="red"> (Coming Soon!!)</font></u></Typography>
-                    <b>{"Roll a Dipped Joint with kief, bud and oil and smoke it with your friends to gain XP"}</b>
-                  </React.Fragment>
-                }
-                placement="left"
-                TransitionComponent={Zoom}
-                >
-                <Fab
-                  variant="contained" 
-                  color="primary"
-                  //onClick={() => setPollinateSeedModal(!pollinateSeedModal)}
-                  className={classes.button}
-                ><DippedIcon />
-                </Fab>
-                </HtmlTooltip>
-              </ThemeProvider>
-                </Paper>
-                </Box>
-              </Grid>
-
-              <Grid item xs={12}>
-              <Box boxShadow={4}>
-                <Paper className={classes.paperBrown}>
-              <ThemeProvider theme={theme}>
-                <HtmlTooltip
-                title={
-                  <React.Fragment>
-                    <Typography color="error" className={classes.font}><u>Craft a fat Cannagar</u> <font color="red"><u>(Coming Soon!!)</u></font></Typography>
-                    <b>{"Roll a Cannagar with kief, bud and oil and smoke it with your friends to gain XP"}</b>
-                  </React.Fragment>
-                }
-                placement="left"
-                TransitionComponent={Zoom}
-                >
-                <Fab
-                  variant="contained" 
-                  color="primary"
-                  //onClick={() => setPollinateSeedModal(!pollinateSeedModal)}
-                  className={classes.button}
-                ><CannagarIcon />
-                </Fab>
-                </HtmlTooltip>
-              </ThemeProvider>
-              
-                </Paper>
-                </Box>
-                
-              </Grid>
+             
               </TabPanel>
 
               <TabPanel value={value} index={2}>
@@ -649,87 +334,21 @@ export const GardenActions = () => {
                   <Box boxShadow={4}>
                   <Paper className={classes.paperBrown}>            
                     <ThemeProvider theme={theme}>
-                    <SeedGifting />
+                    
+              <Typography gutterBottom variant="h3" component="h3" className={classes.font}>
+                Chests
+                </Typography>
+     
                         </ThemeProvider>
                         </Paper>
                         </Box>
                         </Grid>
                       </TabPanel>
                       </Grid>
-                      <Grid item xs>
-                          <div classesName={classes.vr}>
-                          </div>
-                        </Grid>
-                        <Grid item xs={6}>
-                          <Inventory user={user} />
-                        </Grid>
                       </Grid>
                       <br/>
-                      <PlantModal
-                        isOpen={plantSeedModal}
-                        toggleModal={() => setPlantSeedModal(!plantSeedModal)}
-                        availableGardens={user.availableGardens}
-                        availableSeeds={user.availableSeeds}
-                        username={username}
-                      />
-                      <PollinateModal
-                        isOpen={pollinateSeedModal}
-                        toggleModal={() => setPollinateSeedModal(!pollinateSeedModal)}
-                        activeGardens={user.activeGardens}
-                        availablePollen={user.availablePollen}
-                        username={username}
-                      />
-                      <WaterModal
-                        isOpen={waterModal}
-                        toggleModal={() => setWaterModal(!waterModal)}
-                        activeGardens={user.activeGardens}
-                        username={username}
-                        headBlockNum={headBlockNum}
-                      />
-                      <CraftOilModal
-                        isOpen={craftOilModal}
-                        toggleModal={() => setCraftOilModal(!craftOilModal)}
-                        availableBuds={user.availableBuds}
-                        availableVacovens={user.availableVacovens}
-                        username={username}
-                        headBlockNum={headBlockNum}
-                        totalxps={user.totalxps}
-                      />
-                      <KiefModal
-                        isOpen={craftKiefModal}
-                        toggleModal={() => setCraftKiefModal(!craftKiefModal)}
-                        availableBuds={user.availableBuds}
-                        availableKiefbox={user.availableKiefbox}
-                        username={username}
-                        totalxps={user.totalxps}
-                        headBlockNum={headBlockNum}
-                      />
-                      <JointModal
-                        isOpen={craftJointModal}
-                        toggleModal={() => setCraftJointModal(!craftJointModal)}
-                        availableBuds={user.availableBuds}
-                        availablePapers={user.availablePapers}
-                        username={username}
-                        totalxps={user.totalxps}
-                        headBlockNum={headBlockNum}
-                      />
-                      <BluntModal
-                        isOpen={craftBluntModal}
-                        toggleModal={() => setCraftBluntModal(!craftBluntModal)}
-                        availableBuds={user.availableBuds}
-                        availableBluntwraps={user.availableBluntwraps}
-                        username={username}
-                        totalxps={user.totalxps}
-                        headBlockNum={headBlockNum}
-                      />
                       
-                      <HarvestModal
-                        isOpen={harvestModal}
-                        toggleModal={() => setHarvestModal(!harvestModal)}
-                        activeGardens={user.activeGardens}
-                        username={username}
-                        headBlockNum={headBlockNum}
-                      />
+                      
                       </div>
                     </StyleRoot>
                     </div>

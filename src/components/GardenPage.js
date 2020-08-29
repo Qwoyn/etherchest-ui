@@ -27,10 +27,10 @@ export const GardenPage = (user) => {
   
   const farmBackground = "https://i.imgur.com/C3lrbDj.png";
 
-  if (username && !isDesktop) {
+  
     return (
       <div className={classes.root}>
-        <Parallax blur={1} bgImage={farmBackground} strength={500}>
+        <Parallax blur={1}  strength={500}>
           <br/>
           <Container>
           <GardenActions />
@@ -40,15 +40,4 @@ export const GardenPage = (user) => {
         </Parallax>
       </div>
     );
-  } else {
-    return (
-      <div className="card-blank-green-1">
-        <Parallax blur={1} bgImage={farmBackground} strength={500}>
-        <GardenActions />
-        <GrowJournal />
-        <br/>
-        </Parallax>
-    </div>
-    );
-  }
 };
