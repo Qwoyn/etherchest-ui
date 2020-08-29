@@ -165,43 +165,6 @@ const logOut = () => {
           className={classes.font}
         />
       </HtmlTooltip>*/}
-
-      <Tooltip title="Signed In" placement="bottom">
-      <Chip
-        icon={<Avatar className={classes.avatar}>
-        {validatedTo && (
-        <div>
-          <img
-          alt="STEEM Avatar"
-          src={`https://steemitimages.com/u/${validatedTo}/avatar/small`}
-          />
-          </div>
-          )}
-        </Avatar>}
-        label= {username}
-        color="primary"
-        //onDelete={logOut}
-        onClick={handleOpen}
-        className={classes.font}
-      />
-        </Tooltip> 
-      <Tooltip title="Visit Bonfire.com" placement="bottom">
-      <Chip
-        label= "Hoodies!"
-        onClick={handleApparel}
-        className={classes.font}
-      />
-      </Tooltip>
-      <Modal
-        aria-labelledby="simple-modal-title"
-        aria-describedby="simple-modal-description"
-        open={open}
-        onClose={handleClose}
-      >
-        <div style={modalStyle} className={classes.paper}>
-          <Profile />
-        </div>
-      </Modal>
     </div>
   );
   }

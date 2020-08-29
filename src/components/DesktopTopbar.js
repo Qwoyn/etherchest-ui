@@ -74,7 +74,7 @@ export default function DesktopTopbar(){
               placement="top"
               TransitionComponent={Zoom}
               >
-            <Typography color="error" className={classes.font}>Welcome to your Dashboard</Typography>
+            <Typography color="error" className={classes.font}>Etherchest.com</Typography>
             </HtmlTooltip>
             </Grid>
 
