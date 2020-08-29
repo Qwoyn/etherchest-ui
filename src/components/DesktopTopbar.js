@@ -63,36 +63,8 @@ export default function DesktopTopbar(){
 <Grid container spacing={0}>
     <Grid item xs={6}>
         <Grid container spacing={0}>
-            <Grid item xs={1}>
-            <HtmlTooltip
-              title={
-                <React.Fragment>
-                  <Typography color="error" className={classes.font}>Home</Typography>
-                </React.Fragment>
-              }
-              placement="top"
-              TransitionComponent={Zoom}
-              >
-            <IconButton className="layout-menu-button" component={Link1} to="/home">
-            <FarmIcon />
-            </IconButton>
-            </HtmlTooltip>
-            </Grid>
-            <Grid item xs={1}>
-            <HtmlTooltip
-              title={
-                <React.Fragment>
-                  <Typography color="error" className={classes.font}>Visit your Farm</Typography>
-                </React.Fragment>
-              }
-              placement="top"
-              TransitionComponent={Zoom}
-              >
-            <IconButton className="layout-menu-button" component={Link1} to="/farm">
-            <CareIcon />
-            </IconButton>
-            </HtmlTooltip>
-            </Grid>
+            
+            
 
             {/*<Grid item xs={1}>
             <HtmlTooltip
