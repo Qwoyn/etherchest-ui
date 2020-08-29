@@ -128,18 +128,18 @@ const logOut = () => {
       />
       </HtmlTooltip>*/}
 
-        <Tooltip title="Please Sign In to Begin" placement="left">
+        <Tooltip title="EtherChest is Currently in Testnet" placement="left">
       <Chip
         icon={<LockOpen />}
-        color="primary"
-        label= "Not signed in"
+        color="secondary"
+        label= "Demo Mode"
         onClick={handleClick}
         className={classes.font}
       />
       </Tooltip>
-      <Tooltip title="Visit Bonfire.com" placement="left">
+      <Tooltip title="Return to EtherChest.com" placement="left">
       <Chip
-        label= "Hoodies!"
+        label= "Home"
         onClick={handleApparel}
         className={classes.font}
       />
