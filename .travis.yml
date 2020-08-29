@@ -1,0 +1,5 @@
+dist: Bionic Beaver
+script: echo "npm test temporarily disabled"
+language: node_js
+node_js:
+  - "10"

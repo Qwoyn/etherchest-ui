@@ -1,0 +1,529 @@
+@import url('https://fonts.googleapis.com/css?family=Jua&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
+
+.custom-icon {
+  background-image: url('https://i.imgur.com/ZUyjH7Jt.png');
+}
+
+.menu-margin {
+  margin-top: -10px;
+}
+
+.bg-brown-5 {
+   background-color: #E57A1A;
+}
+
+.bg-black {
+  background-color: rgb(0, 0, 0);
+}
+
+.bg-sky {
+  background-color: #79C4CB;
+}
+
+.count.visit {
+  background-color: #2F7F52;
+}
+
+.count.purchase {
+  background-color: #2F7F52;
+}
+
+.count.rev {
+  background-color: #2F7F52;
+}
+
+.card-blank-green-1 {
+  // box-shadow: 10px 10px 5px black;
+  background-color: black;
+  padding: 1em;
+  margin-bottom: 16px;
+  // @include border-radius($borderRadius);
+
+  &.card-w-title {
+    padding-bottom: 2em;
+  }
+
+  h1 {
+    margin: 0.5em 0 0.5em 0;
+    border-bottom: 1px solid #d5d5d5;
+    padding: 0.1em;
+    font-size: 24px;
+
+    &:first-child {
+      margin: 0 0 0.5em 0;
+    }
+  }
+}
+
+.card-blank-green-2 {
+  box-shadow: 10px 10px 5px black;
+  background-color: #011925;
+
+  padding: 1em;
+  margin-bottom: 16px;
+  // @include border-radius($borderRadius);
+
+  &.card-w-title {
+    padding-bottom: 2em;
+  }
+
+  h1 {
+    margin: 0.5em 0 0.5em 0;
+    border-bottom: 1px solid #d5d5d5;
+    padding: 0.1em;
+    font-size: 24px;
+
+    &:first-child {
+      margin: 0 0 0.5em 0;
+    }
+  }
+}
+
+.card-blank-sand-3 {
+  box-shadow: 10px 10px 5px black;
+  background-color: #011925;
+  // background-image: url("https://i.imgur.com/vAUGcFV.png");
+
+  padding: 1em;
+  margin-bottom: 16px;
+  // @include border-radius($borderRadius);
+
+  &.card-w-title {
+    padding-bottom: 2em;
+  }
+
+  h1 {
+    margin: 0.5em 0 0.5em 0;
+    border-bottom: 1px solid #d5d5d5;
+    padding: 0.1em;
+    font-size: 24px;
+
+    &:first-child {
+      margin: 0 0 0.5em 0;
+    }
+  }
+}
+
+.card-blank-dark-green {
+  box-shadow: 10px 10px 5px black;
+  background-color: #098819;
+  // background-image: url("https://i.imgur.com/vAUGcFV.png");
+
+  padding: 1em;
+  margin-bottom: 16px;
+  // @include border-radius($borderRadius);
+
+  &.card-w-title {
+    padding-bottom: 2em;
+  }
+
+  h1 {
+    margin: 0.5em 0 0.5em 0;
+    border-bottom: 1px solid #d5d5d5;
+    padding: 0.1em;
+    font-size: 24px;
+
+    &:first-child {
+      margin: 0 0 0.5em 0;
+    }
+  }
+}
+
+.card-blank-blue {
+  box-shadow: 10px 10px 5px black;
+  background-color: #08636B;
+  // background-image: url("https://i.imgur.com/vAUGcFV.png");
+
+  padding: 1em;
+  margin-bottom: 16px;
+  // @include border-radius($borderRadius);
+
+  &.card-w-title {
+    padding-bottom: 2em;
+  }
+
+  h1 {
+    margin: 0.5em 0 0.5em 0;
+    border-bottom: 1px solid #d5d5d5;
+    padding: 0.1em;
+    font-size: 24px;
+
+    &:first-child {
+      margin: 0 0 0.5em 0;
+    }
+  }
+}
+
+.card-blank-fixph {
+  box-shadow: 10px 10px 5px black;
+  background-color: #848d90;
+  padding: 1em;
+  margin-bottom: 16px;
+  // @include border-radius($borderRadius);
+
+  &.card-w-title {
+    padding-bottom: 2em;
+  }
+
+  h1 {
+    margin: 0.5em 0 0.5em 0;
+    border-bottom: 1px solid #d5d5d5;
+    padding: 0.1em;
+    font-size: 24px;
+
+    &:first-child {
+      margin: 0 0 0.5em 0;
+    }
+  }
+}
+
+.card-blank-brown {
+  box-shadow: 10px 10px 5px black;
+  background-color: #003A30;
+  //background-color: #2E5B71;
+  padding: 1em;
+  margin-bottom: 20px;
+  margin-top: 16px;
+  // @include border-radius($borderRadius);
+
+  &.card-w-title {
+    padding-bottom: 2em;
+  }
+
+  h1 {
+    margin: 0.5em 0 0.5em 0;
+    border-bottom: 1px solid #d5d5d5;
+    padding: 0.1em;
+    font-size: 24px;
+
+    &:first-child {
+      margin: 0 0 0.5em 0;
+    }
+  }
+}
+
+.card-blank-darkbrown {
+  box-shadow: 10px 10px 5px black;
+  background-color: #4d2416;
+  padding: 1em;
+  margin-bottom: 16px;
+  // @include border-radius($borderRadius);
+
+  &.card-w-title {
+    padding-bottom: 2em;
+  }
+
+  h1 {
+    margin: 0.5em 0 0.5em 0;
+    border-bottom: 1px solid #d5d5d5;
+    padding: 0.1em;
+    font-size: 24px;
+
+    &:first-child {
+      margin: 0 0 0.5em 0;
+    }
+  }
+}
+
+.card-blank-nutrients {
+  box-shadow: 10px 10px 5px black;
+  background-color: #472d58;
+  padding: 1em;
+  margin-bottom: 16px;
+  // @include border-radius($borderRadius);
+
+  &.card-w-title {
+    padding-bottom: 2em;
+  }
+
+  h1 {
+    margin: 0.5em 0 0.5em 0;
+    border-bottom: 1px solid #d5d5d5;
+    padding: 0.1em;
+    font-size: 24px;
+
+    &:first-child {
+      margin: 0 0 0.5em 0;
+    }
+  }
+}
+
+.card-blank-water {
+  box-shadow: 10px 10px 5px black;
+  background-color: #124c5d;
+  padding: 1em;
+  margin-bottom: 16px;
+  // @include border-radius($borderRadius);
+
+  &.card-w-title {
+    padding-bottom: 2em;
+  }
+
+  h1 {
+    margin: 0.5em 0 0.5em 0;
+    border-bottom: 1px solid #d5d5d5;
+    padding: 0.1em;
+    font-size: 24px;
+
+    &:first-child {
+      margin: 0 0 0.5em 0;
+    }
+  }
+}
+
+.card-blank-green {
+  box-shadow: 10px 10px 5px black;
+  background-color: #08c874;
+  padding: 1em;
+  margin-bottom: 16px;
+  // @include border-radius($borderRadius);
+
+  &.card-w-title {
+    padding-bottom: 2em;
+  }
+
+  h1 {
+    margin: 0.5em 0 0.5em 0;
+    border-bottom: 1px solid #d5d5d5;
+    padding: 0.1em;
+    font-size: 24px;
+
+    &:first-child {
+      margin: 0 0 0.5em 0;
+    }
+  }
+}
+
+.card-blank-pollen {
+  box-shadow: 10px 10px 5px black;
+  background-color: #e48914;
+  padding: 1em;
+  margin-bottom: 16px;
+  // @include border-radius($borderRadius);
+
+  &.card-w-title {
+    padding-bottom: 2em;
+  }
+
+  h1 {
+    margin: 0.5em 0 0.5em 0;
+    border-bottom: 1px solid #d5d5d5;
+    padding: 0.1em;
+    font-size: 24px;
+
+    &:first-child {
+      margin: 0 0 0.5em 0;
+    }
+  }
+}
+
+.card-blank-red {
+  box-shadow: 10px 10px 5px black;
+  background-color: #AA3F39;
+  padding: 1em;
+  margin-bottom: 16px;
+  // @include border-radius($borderRadius);
+
+  &.card-w-title {
+    padding-bottom: 2em;
+  }
+
+  h1 {
+    margin: 0.5em 0 0.5em 0;
+    border-bottom: 1px solid #d5d5d5;
+    padding: 0.1em;
+    font-size: 24px;
+
+    &:first-child {
+      margin: 0 0 0.5em 0;
+    }
+  }
+}
+
+.card-blank-red-1 {
+  // box-shadow: 10px 10px 5px black;
+  background-color: #F45047;
+  padding: 1em;
+  margin-bottom: 16px;
+  // @include border-radius($borderRadius);
+
+  &.card-w-title {
+    padding-bottom: 2em;
+  }
+
+  h1 {
+    margin: 0.5em 0 0.5em 0;
+    border-bottom: 1px solid #d5d5d5;
+    padding: 0.1em;
+    font-size: 24px;
+
+    &:first-child {
+      margin: 0 0 0.5em 0;
+    }
+  }
+}
+
+.bgred {
+   background-color: #AA3F39;
+}
+
+.bg-light {
+   background-color: #8B8568;
+}
+
+.bgimg-grow {
+  background-image: url("https://vtgrowshop.com/wp-content/uploads/2018/11/cropped-2018-11-02-14.28.43.jpg")
+}
+
+.bgimg-shovel {
+  background-image: url("https://i.kinja-img.com/gawker-media/image/upload/s--t303Fhwz--/c_scale,f_auto,fl_progressive,q_80,w_800/18l8wp6zl0z9cjpg.jpg");
+}
+
+.bgimg-soil {
+  background-image: url("https://www.ilovegrowingmarijuana.com/wp-content/uploads/2018/08/Soil.jpg");
+}
+
+.bgimg {
+  background-image: url("https://images1.westword.com/imager/u/original/9043422/den_canna_20150731_altitudedispensarywest_federal_slentz_05.jpg");
+}
+
+.bgimg-seeds-2 {
+  background-image: url("https://news.bitcoin.com/wp-content/uploads/2017/02/Global-Cannabis-Seed-Banks-Are-Accepting-Bitcoin.png");
+}
+
+.bgimg-seeds {
+  background-image: url("https://www.greencultured.co/wp-content/uploads/2017/06/Marijuana-Seeds.jpg");
+}
+
+.bgimgdash {
+  background-image: url("https://wallpapercave.com/wp/wp2594557.jpg");
+}
+
+.bgWeedimg {
+  background-image: url("https://i.imgur.com/gYfDO7V.jpg");
+}
+
+.card-blank {
+  // box-shadow: 10px 10px 5px black;
+  background-color: #ffffff;
+  padding: 1em;
+  margin-bottom: 16px;
+  // @include border-radius($borderRadius);
+
+  &.card-w-title {
+    padding-bottom: 2em;
+  }
+
+  h1 {
+    margin: 0.5em 0 0.5em 0;
+    border-bottom: 1px solid #d5d5d5;
+    padding: 0.1em;
+    font-size: 24px;
+
+    &:first-child {
+      margin: 0 0 0.5em 0;
+    }
+  }
+}
+
+.card-weedLeft {
+  background-image: url("https://www.cannareupstore.com/image/cache/catalog/rsz_marijuana-banner-1140x380.png");
+  padding: 1em;
+  margin-bottom: 16px;
+  // @include border-radius($borderRadius);
+
+  &.card-w-title {
+    padding-bottom: 2em;
+  }
+
+  h1 {
+    margin: 0.5em 0 0.5em 0;
+    border-bottom: 1px solid #d5d5d5;
+    padding: 0.1em;
+    font-size: 24px;
+
+    &:first-child {
+      margin: 0 0 0.5em 0;
+    }
+  }
+}
+
+.card-weedLeft-brown {
+  background-color: #804227;
+  padding: 1em;
+  margin-bottom: 16px;
+  // @include border-radius($borderRadius);
+
+  &.card-w-title {
+    padding-bottom: 2em;
+  }
+
+  h1 {
+    margin: 0.5em 0 0.5em 0;
+    border-bottom: 1px solid #d5d5d5;
+    padding: 0.1em;
+    font-size: 24px;
+
+    &:first-child {
+      margin: 0 0 0.5em 0;
+    }
+  }
+}
+
+.card-dispensary {
+  background-image: url("https://www.cannareupstore.com/image/cache/catalog/rsz_marijuana-banner-1140x380.png");
+  padding: 1em;
+  margin-bottom: 16px;
+  // @include border-radius($borderRadius);
+
+  &.card-w-title {
+    padding-bottom: 2em;
+  }
+
+  h1 {
+    margin: 0.5em 0 0.5em 0;
+    border-bottom: 1px solid #d5d5d5;
+    padding: 0.1em;
+    font-size: 24px;
+
+    &:first-child {
+      margin: 0 0 0.5em 0;
+    }
+  }
+}
+
+.card-margin {
+  margin: 38px;
+}
+
+.seed-title,
+.logging-in-text {
+  color: #fff;
+}
+
+button.load-history {
+  max-width: 200px;
+  margin-top: 20px;
+}
+
+.activity-log {
+  max-height: 300px;
+  overflow-y: scroll;
+}
+
+.section-heading {
+  font-weight: bold;
+}
+#fetch-all-history {
+  margin-top: 20px;
+}
+
+button.export-stats {
+  max-width: 200px;
+  margin: 0 0 10px 20px;
+}
+
+.form-input {
+  margin-bottom: 20px;
+}
