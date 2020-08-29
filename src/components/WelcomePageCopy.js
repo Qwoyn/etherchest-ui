@@ -24,7 +24,7 @@ export const Partners = () => {
         <div className="p-fluid">
         <center>
         <Paper className={classes.paper}>
-                <center>
+                {/*<center>
                 <font color="#ffffff"><b><u>We Proudly Support:</u></b></font>
                 </center>
                 <br/>
@@ -41,7 +41,7 @@ export const Partners = () => {
                     src="https://i.imgur.com/nc04iwsm.png?1"
                   />
                 </a>
-                <br/>
+                <br/>*/}
                 </Paper> 
         </center>
         </div>

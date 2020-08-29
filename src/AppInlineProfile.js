@@ -130,10 +130,8 @@ const logOut = () => {
 
         <Tooltip title="EtherChest is Currently in Testnet" placement="left">
       <Chip
-        icon={<LockOpen />}
         color="secondary"
         label= "Demo Mode"
-        onClick={handleClick}
         className={classes.font}
       />
       </Tooltip>

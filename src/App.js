@@ -281,7 +281,7 @@ class App extends Component {
             >
               <div className="layout-sidebar-scroll-content">
                 <div className="layout-logo">
-                <a href="/">
+                <a href="https://etherchest.com">
                 <img
                     alt="Logo"
                     src="/assets/layout/images/hashkingsbanner.png"
@@ -299,22 +299,8 @@ class App extends Component {
             </ScrollPanel>
           </div>
           <div className="layout-main">
-            <Route path="/login" component={LoginPage} />
-            <Route path="/" exact component={HomePage} />
-            <Route path="/garden/:username" component={UserGarden} />
-            <Route exact path="/farm" component={GardenPage} />
-            <Route path="/market/farmplots" component={MarketPlots} />
-            <Route path="/market/seedbank" component={MarketSeeds} />
-            <Route path="/callback" component={SCCallback} />
-            <Route path="/faq" component={FAQPage} />
-            <Route path="/accounting" component={Stats} />
-            <Route path="/tutorial" component={Tutorial} />
-            <Route path="/market/MarketSupplies" component={MarketSupplies} />
-            <Route path="/trending" component={Trending} />
-            <Route path="/streams" component={TwitchStreams} />
-            <Route path="/growers" component={BoardMemberApp} />  
+            <Route path="/" exact component={HomePage} /> 
             <Route path="/home" component={HomePage} />
-            <Route path="/markets" component={GiftSeed} />
           </div>
           <div className="layout-mask"></div>
         </div> 
