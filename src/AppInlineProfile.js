@@ -34,7 +34,7 @@ const handleClick = () => {
 
 const handleApparel = () => {
   //window.location = 'https://www.bonfire.com/hashkings-community-shirts/';
-  window.open('https://www.bonfire.com/hashkings-community-shirts/');
+  window.open('https://etherchest.com/');
 };
 
 const HtmlTooltip = withStyles(theme => ({
@@ -110,10 +110,10 @@ const logOut = () => {
     return (
       <div className="profile">
         
-        {/*<HtmlTooltip
+        <HtmlTooltip
               title={
                 <React.Fragment>
-                  <Typography color="error" className={classes.font}>Maintenance Mode<br/>Be back shortly, please check our twitter for updates</Typography>
+                  <Typography color="error" className={classes.font}>Demo Mode</Typography>
                 </React.Fragment>
               }
               placement="top"
@@ -122,24 +122,14 @@ const logOut = () => {
       <Chip
         icon={<BuildIcon />}
         color="secondary"
-        label= "Maintenance Mode"
+        label= "Demo Mode"
         onClick={handleClick}
         className={classes.font}
       />
-      </HtmlTooltip>*/}
-
-        <Tooltip title="Please Sign In to Begin" placement="left">
+      </HtmlTooltip>
+      <Tooltip title="Etherchest.com" placement="left">
       <Chip
-        icon={<LockOpen />}
-        color="primary"
-        label= "Not signed in"
-        onClick={handleClick}
-        className={classes.font}
-      />
-      </Tooltip>
-      <Tooltip title="Visit Bonfire.com" placement="left">
-      <Chip
-        label= "Hoodies!"
+        label= "Home"
         onClick={handleApparel}
         className={classes.font}
       />

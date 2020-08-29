@@ -8,7 +8,7 @@ export class AppFooter extends Component {
                 <CookieConsent
                     location="bottom"
                     buttonText="I Accept"
-                    cookieName="hashkingsGDRPaccept"
+                    cookieName="etherchestGDRPaccept"
                     style={{ background: "#2B373B" }}
                     buttonStyle={{ color: "#4e503b", fontSize: "13px" }}
                     expires={150}
