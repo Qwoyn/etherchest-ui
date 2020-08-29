@@ -294,7 +294,6 @@ class App extends Component {
                   model={this.menu}
                   onMenuItemClick={this.onMenuItemClick}
                 />
-                <Partners />
               </div>
             </ScrollPanel>
           </div>
