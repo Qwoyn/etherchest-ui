@@ -158,28 +158,9 @@ const logOut = () => {
         />
       </HtmlTooltip>*/}
 
-      <Tooltip title="Signed In" placement="bottom">
+      <Tooltip title="EtherChest.com" placement="bottom">
       <Chip
-        icon={<Avatar className={classes.avatar}>
-        {validatedTo && (
-        <div>
-          <img
-          alt="STEEM Avatar"
-          src={`https://steemitimages.com/u/${validatedTo}/avatar/small`}
-          />
-          </div>
-          )}
-        </Avatar>}
-        label= {username}
-        color="primary"
-        //onDelete={logOut}
-        onClick={handleOpen}
-        className={classes.font}
-      />
-        </Tooltip> 
-      <Tooltip title="Visit Bonfire.com" placement="bottom">
-      <Chip
-        label= "Hoodies!"
+        label= "Home"
         onClick={handleApparel}
         className={classes.font}
       />
