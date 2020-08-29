@@ -94,22 +94,6 @@ export default function DesktopTopbar(){
             </HtmlTooltip>
             </Grid>
 
-            <Grid item xs={1}>
-            <HtmlTooltip
-              title={
-                <React.Fragment>
-                  <Typography color="error" className={classes.font}>Market</Typography>
-                </React.Fragment>
-              }
-              placement="top"
-              TransitionComponent={Zoom}
-              >
-            <IconButton className="layout-menu-button" component={Link1} to="/markets">
-            <StoreIcon />
-            </IconButton>
-            </HtmlTooltip>
-            </Grid>
-
             {/*<Grid item xs={1}>
             <HtmlTooltip
               title={
@@ -125,76 +109,8 @@ export default function DesktopTopbar(){
             </IconButton>
             </HtmlTooltip>
             </Grid> */}
-
-            <Grid item xs={1}>
-            <HtmlTooltip
-              title={
-                <React.Fragment>
-                  <Typography color="error" className={classes.font}>Trending Posts</Typography>
-                </React.Fragment>
-              }
-              placement="top"
-              TransitionComponent={Zoom}
-              >
-            <IconButton className="layout-menu-button" component={Link1} to="/trending">
-            <BlogIcon />
-            </IconButton>
-            </HtmlTooltip>
-            </Grid> 
-
-            <Grid item xs={1}>
-            <HtmlTooltip
-              title={
-                <React.Fragment>
-                  <Typography color="error" className={classes.font}>Learn to Play</Typography>
-                </React.Fragment>
-              }
-              placement="top"
-              TransitionComponent={Zoom}
-              >
-            <IconButton className="layout-menu-button" component={Link1} to="/tutorial">
-            <TutorialIcon />
-            </IconButton>
-            </HtmlTooltip>
-            </Grid> 
-
-            <Grid item xs={1}>
-            <HtmlTooltip
-              title={
-                <React.Fragment>
-                  <Typography color="error" className={classes.font}>Become a Patron</Typography>
-                </React.Fragment>
-              }
-              placement="top"
-              TransitionComponent={Zoom}
-              >
-            <a href="https://www.patreon.com/hashkings" target="_default">    
-            <IconButton className="layout-menu-button">
-            <PatreonIcon />
-            </IconButton>
-            </a>
-            </HtmlTooltip>
-            </Grid> 
-
-            <Grid item xs={1}>
-            <HtmlTooltip
-              title={
-                <React.Fragment>
-                  <Typography color="error" className={classes.font}>Dutch Passion Seeds</Typography>
-                </React.Fragment>
-              }
-              placement="top"
-              TransitionComponent={Zoom}
-              >
-            <a href="https://www.dutch-passion.com?afmc=c5&utm_campaign=c5&utm_source=leaddyno&utm_medium=affiliate" target="_default">    
-            <IconButton className="layout-menu-button">
-            <FunditionIcon />
-            </IconButton>
-            </a>
-            </HtmlTooltip>
-            </Grid> 
             
-            <Grid item xs={1}>
+            {/*<Grid item xs={1}>
             <HtmlTooltip
               title={
                 <React.Fragment>
@@ -210,23 +126,7 @@ export default function DesktopTopbar(){
             </IconButton>
             </a>
             </HtmlTooltip>
-            </Grid> 
-            
-            <Grid item xs={1}>
-            <HtmlTooltip
-              title={
-                <React.Fragment>
-                  <Typography color="error" className={classes.font}>FAQ</Typography>
-                </React.Fragment>
-              }
-              placement="top"
-              TransitionComponent={Zoom}
-              >
-            <IconButton className="layout-menu-button" component={Link1} to="/faq">
-            <InformationIcon />
-            </IconButton>
-            </HtmlTooltip>
-            </Grid>
+            </Grid> */}
                         
         </Grid>
     </Grid>
