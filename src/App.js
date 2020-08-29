@@ -177,58 +177,29 @@ class App extends Component {
   createMenu() {
     this.menu = [
       {
-        label: "Farm",
-        items: [
-          {
-            label: "Fields",
-            to: "/farm"
-          },
-          {
-            label: "Office",
-            to: "/accounting"
-          },
-        ]
-      },
-      {
-        label: "Market",
-        items: [
-          {
-            label: "Farm Plots",
-            to: "/market/farmplots"
-          },
-          {
-            label: "Seeds",
-            to: "/market/seedbank"
-          },
-        ]
+        label: "Home",
       },
       {
         label: "Community",
         items: [
           {
-            label: "Trending Posts",
-            to: "/trending"
-          },
-          {
-            label: "Twitch Streams",
-            to: "/streams"
-          },
-          {
-            label: "Curation Trail",
+            label: "Telegram",
+            icon: {ExitToAppIcon},
             command: () => {
               /*window.location = "https://steem-engine.com/?p=market&t=KFQ";*/
-              window.open('https://steempeak.com/@hashkings/introducing-hashkings-curation-trail', '_blank');
+              window.open('https://discord.gg/Zq29TWe', '_blank');
             }
           },
           {
-            label: "Steemit Hive",
+            label: "Discord",
+            icon: {ExitToAppIcon},
             command: () => {
               /*window.location = "https://steem-engine.com/?p=market&t=KFQ";*/
-              window.open('https://beta.steemit.com/trending/hive-164881', '_blank');
+              window.open('https://discord.gg/Zq29TWe', '_blank');
             }
           },
           {
-            label: "Chat on Discord",
+            label: "Twitter",
             icon: {ExitToAppIcon},
             command: () => {
               /*window.location = "https://steem-engine.com/?p=market&t=KFQ";*/
@@ -236,14 +207,6 @@ class App extends Component {
             }
           },
         ]
-      },
-      {
-        label: "Growers Association",
-        to: "/growers"
-      },
-      {
-        label: "About",
-        to: "/faq"
       }
     ];
   }
@@ -352,48 +315,6 @@ class App extends Component {
             <Route path="/growers" component={BoardMemberApp} />  
             <Route path="/home" component={HomePage} />
             <Route path="/markets" component={GiftSeed} />
-
-            <Route path="/seeds/steem-og" component={SteemOG} />
-            <Route path="/seeds/afghani" component={Afghani} />
-            <Route path="/seeds/colombian-gold" component={ColombianGold} />
-            <Route path="/seeds/lashkar-gah" component={LashkarGah} />
-            <Route path="/seeds/chocolate-thai" component={ChocolateThai} />
-            <Route path="/seeds/thai" component={Thai} />
-            <Route path="/seeds/swazi-gold" component={SwaziGold} />
-            <Route path="/seeds/malawi" component={Malawi} />
-            <Route path="/seeds/kings-bread" component={KingsBread} />
-            <Route path="/seeds/kilimanjaro" component={Kilimanjaro} />
-            <Route path="/seeds/acapulco-gold" component={AcapulcoGold} />
-            <Route path="/seeds/durban-poison" component={DurbanPoison} />
-            <Route path="/seeds/lambs-bread" component={LambsBread} />
-            <Route path="/seeds/mazar-i-sharif" component={MazariSharif} />
-            <Route path="/seeds/hindu-kush" component={HinduKush} />
-            <Route path="/seeds/panama-red" component={PanamaRed} />
-            <Route path="/seeds/aceh" component={Aceh} />
-
-            <Route path="/pollen/colombian-gold" component={ColombianGoldpollen} />
-            <Route path="/pollen/lashkar-gah" component={LashkarGahpollen} />
-            <Route path="/pollen/chocolate-thai" component={ChocolateThaipollen} />
-            <Route path="/pollen/thai" component={Thaipollen} />
-            <Route path="/pollen/swazi-gold" component={SwaziGoldpollen} />
-            <Route path="/pollen/malawi" component={Malawipollen} />
-            <Route path="/pollen/kings-bread" component={KingsBreadpollen} />
-            <Route path="/pollen/kilimanjaro" component={Kilimanjaropollen} />
-            <Route path="/pollen/acapulco-gold" component={AcapulcoGoldpollen} />
-            <Route path="/pollen/durban-poison" component={DurbanPoisonpollen} />
-            <Route path="/pollen/lambs-bread" component={LambsBreadpollen} />
-            <Route path="/pollen/mazar-i-sharif" component={MazariSharifpollen} />
-            <Route path="/pollen/hindu-kush" component={HinduKushpollen} />
-            <Route path="/pollen/panama-red" component={PanamaRedpollen} />
-            <Route path="/pollen/aceh" component={Acehpollen} />
-            <Route path="/pollen/afghani" component={Afghanipollen} />
-
-            <Route path="/plots/Afghanistan" component={Afghanistan} />
-            <Route path="/plots/Africa" component={Africa} />
-            <Route path="/plots/Asia" component={Asia} />
-            <Route path="/plots/Central-America" component={CentralAmerica} />
-            <Route path="/plots/Jamaica" component={Jamaica} />
-            <Route path="/plots/Mexico" component={Mexico} />
           </div>
           <div className="layout-mask"></div>
         </div> 
