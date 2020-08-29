@@ -34,7 +34,7 @@ const handleClick = () => {
 
 const handleApparel = () => {
   //window.location = 'https://www.bonfire.com/hashkings-community-shirts/';
-  window.open('https://etherchest.com/');
+  window.open('https://www.bonfire.com/hashkings-community-shirts/');
 };
 
 const HtmlTooltip = withStyles(theme => ({
@@ -110,10 +110,10 @@ const logOut = () => {
     return (
       <div className="profile">
         
-        <HtmlTooltip
+        {/*<HtmlTooltip
               title={
                 <React.Fragment>
-                  <Typography color="error" className={classes.font}>Demo Mode</Typography>
+                  <Typography color="error" className={classes.font}>Maintenance Mode<br/>Be back shortly, please check our twitter for updates</Typography>
                 </React.Fragment>
               }
               placement="top"
@@ -122,14 +122,24 @@ const logOut = () => {
       <Chip
         icon={<BuildIcon />}
         color="secondary"
-        label= "Demo Mode"
+        label= "Maintenance Mode"
         onClick={handleClick}
         className={classes.font}
       />
-      </HtmlTooltip>
-      <Tooltip title="Etherchest.com" placement="left">
+      </HtmlTooltip>*/}
+
+        <Tooltip title="Please Sign In to Begin" placement="left">
       <Chip
-        label= "Home"
+        icon={<LockOpen />}
+        color="primary"
+        label= "Not signed in"
+        onClick={handleClick}
+        className={classes.font}
+      />
+      </Tooltip>
+      <Tooltip title="Visit Bonfire.com" placement="left">
+      <Chip
+        label= "Hoodies!"
         onClick={handleApparel}
         className={classes.font}
       />
@@ -158,9 +168,28 @@ const logOut = () => {
         />
       </HtmlTooltip>*/}
 
-      <Tooltip title="EtherChest.com" placement="bottom">
+      <Tooltip title="Signed In" placement="bottom">
       <Chip
-        label= "Home"
+        icon={<Avatar className={classes.avatar}>
+        {validatedTo && (
+        <div>
+          <img
+          alt="STEEM Avatar"
+          src={`https://steemitimages.com/u/${validatedTo}/avatar/small`}
+          />
+          </div>
+          )}
+        </Avatar>}
+        label= {username}
+        color="primary"
+        //onDelete={logOut}
+        onClick={handleOpen}
+        className={classes.font}
+      />
+        </Tooltip> 
+      <Tooltip title="Visit Bonfire.com" placement="bottom">
+      <Chip
+        label= "Hoodies!"
         onClick={handleApparel}
         className={classes.font}
       />
