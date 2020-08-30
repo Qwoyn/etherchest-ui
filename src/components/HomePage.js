@@ -8,14 +8,6 @@ const useStyles = makeStyles(theme => ({
 root: {
   flexGrow: 1,
 },
-paper: {
-  padding: theme.spacing(1),
-  textAlign: 'left',
-  color: theme.palette.text.secondary,
-  whiteSpace: 'wrap',
-  marginBottom: theme.spacing(3),
-  backgroundColor: "Transparent",
-},
 }));
 
 export const HomePage = (user) => {

@@ -241,7 +241,6 @@ class App extends Component {
           </div>
           <div className="layout-main">
             <Route path="/" exact component={HomePage} /> 
-            <Route path="/home" component={HomePage} />
           </div>
           <div className="layout-mask"></div>
         </div> 

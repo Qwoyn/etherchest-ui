@@ -95,7 +95,7 @@ const useStyles = makeStyles(theme => ({
     color: theme.palette.text.secondary,
     whiteSpace: 'nowrap',
     marginBottom: theme.spacing(1),
-    backgroundColor: "#000E0E",
+    backgroundColor: "#000000",
   },
   paperRed: {
     padding: theme.spacing(1),
@@ -117,13 +117,14 @@ const useStyles = makeStyles(theme => ({
     height: 500,
   },
   background: {
-    backgroundColor: "#073232"
+    backgroundColor: "#000000"
   },
   title: {
     flexGrow: 1,
     alignSelf: 'flex-start',
     fontFamily: '"Orbitron", sans-serif',
-    color: "#DFB17B"
+    color: "#000000",
+    
   },
 }));
 
@@ -136,7 +137,7 @@ const theme = createMuiTheme({
 const HtmlTooltip = withStyles(theme => ({
   tooltip: {
     backgroundColor: "#000000",
-    color: '#DFB17B',
+    color: '#b69552',
     maxWidth: 220,
     fontSize: theme.typography.pxToRem(12),
     border: '1px solid #dadde9',
@@ -167,14 +168,6 @@ export const GardenActions = () => {
       leaderboard: []
     });
   
-    const [plantSeedModal, setPlantSeedModal] = useState(false);
-    const [pollinateSeedModal, setPollinateSeedModal] = useState(false);
-    const [waterModal, setWaterModal] = useState(false);
-    const [craftOilModal, setCraftOilModal] = useState(false);
-    const [craftKiefModal, setCraftKiefModal] = useState(false);
-    const [craftJointModal, setCraftJointModal] = useState(false);
-    const [craftBluntModal, setCraftBluntModal] = useState(false);
-    const [harvestModal, setHarvestModal] = useState(false);
     const [user, setUser] = useState({
       availableSeeds: [],
       activeGardens: [],
@@ -251,11 +244,9 @@ export const GardenActions = () => {
       return (
         <div className={classes.flex}>
           <StyleRoot>
-          <div style={styles.slideInLeft2}>
+          <div>
           <Grid container spacing={1}>
-          
-
-          
+          <Grid item xs>
           <AppBar position="static" color='transparent'>
           <Typography className={classes.title} variant="h5">
             Your Chest
@@ -268,13 +259,23 @@ export const GardenActions = () => {
           aria-label="scrollable prevent tabs example"
           className={classes.background}
         >
+          <HtmlTooltip
+              title={
+                <React.Fragment>
+                  <Typography className={classes.font}><b><u>Onyx</u></b></Typography>
+                </React.Fragment>
+              }
+              placement="left"
+              TransitionComponent={Zoom}
+              >
           <Tab icon={<FarmingIcon />} aria-label="cubby" {...a11yProps(0)} />
+          </HtmlTooltip>
           <Tab icon={<CraftingIcon />} aria-label="drawer" {...a11yProps(1)} />
           <Tab icon={<GiftIcon />} aria-label="chest" {...a11yProps(2)} />
         </Tabs>
       </AppBar>      
-      <TabPanel value={value} index={0}>
-            <Grid item xs={12}>
+      <TabPanel value={value} index={0} className={classes.background}>
+            <Grid item xs>
             <Box boxShadow={4}>
               <Paper className={classes.paperBrown}>
             <ThemeProvider theme={theme}>
@@ -282,18 +283,15 @@ export const GardenActions = () => {
               <Typography gutterBottom variant="h3" component="h3" className={classes.font}>
                 gem
                 </Typography>
-
                 </ThemeProvider>
                 <hr/>
                 </Paper>
                 </Box>
               </Grid>
+              </TabPanel>
               
-              
-                        </TabPanel>
-
-                        <TabPanel value={value} index={1}>
-                        <Grid item xs={12}>
+              <TabPanel value={value} index={1}>
+               <Grid item xs={12}>
             <Box boxShadow={4}>
               <Paper className={classes.paperBrown}>
             <ThemeProvider theme={theme}>
@@ -335,7 +333,9 @@ export const GardenActions = () => {
                         </Box>
                         </Grid>
                       </TabPanel>
-                    
+                    </Grid>
+                    <Grid item xs={2}>
+                      </Grid>
                       </Grid>
                       <br/>
                       
