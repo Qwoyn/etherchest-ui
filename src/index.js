@@ -13,7 +13,7 @@ import { ParallaxProvider } from 'react-scroll-parallax';
 const theme = createMuiTheme({
   palette: {
     background: {
-      default: "#fcfcfa"
+      default: "#3f444a"
     }
   }
 });

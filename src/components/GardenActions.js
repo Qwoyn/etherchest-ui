@@ -12,6 +12,7 @@ import Paper from '@material-ui/core/Paper';
 import { slideInLeft } from 'react-animations';
 import Radium, {StyleRoot} from 'radium';
 import { fadeIn } from 'react-animations';
+import DiamondCard from './Diamond.js';
 import { slideInRight } from 'react-animations';
 import { WaterIcon, 
          GerminateIcon, 
@@ -31,6 +32,17 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import AppBar from '@material-ui/core/AppBar';
 import PropTypes from 'prop-types';
+import Button from '@material-ui/core/Button';
+import SpeedDial from '@material-ui/lab/SpeedDial';
+import SpeedDialIcon from '@material-ui/lab/SpeedDialIcon';
+import SpeedDialAction from '@material-ui/lab/SpeedDialAction';
+import FileCopyIcon from '@material-ui/icons/FileCopyOutlined';
+import SaveIcon from '@material-ui/icons/Save';
+import PrintIcon from '@material-ui/icons/Print';
+import ShareIcon from '@material-ui/icons/Share';
+import FavoriteIcon from '@material-ui/icons/Favorite';
+import EditIcon from '@material-ui/icons/Edit';
+import DiamondTable from "./Diamondtable";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -62,38 +74,26 @@ function a11yProps(index) {
   };
 }
 
-const styles = {
-  slideInRight: {
-    animation: 'x 1s',
-    animationName: Radium.keyframes(slideInRight, 'slideInRight')
-  },
-  slideInLeft: {
-    animation: 'x 1s',
-    animationName: Radium.keyframes(slideInLeft, 'slideInLeft')
-  },
-  slideInLeft1: {
-    animation: 'x 1s',
-    animationName: Radium.keyframes(slideInLeft, 'slideInLeft1')
-  },
-  fadeIn: {
-    animation: 'x 1s',
-    animationName: Radium.keyframes(fadeIn, 'fadeIn')
-  },
-  slideInLeft2: {
-    animation: 'x 1s',
-    animationName: Radium.keyframes(slideInLeft, 'slideInLeft2')
-  }
-}
 
 const useStyles = makeStyles(theme => ({
   button: {
     margin: theme.spacing(1),
   },
+  dialroot: {
+    height: 380,
+    transform: 'translateZ(0px)',
+    flexGrow: 1,
+  },
+  speedDial: {
+    position: 'absolute',
+    bottom: theme.spacing(2),
+    right: theme.spacing(2),
+  },
   paperBrown: {
     padding: theme.spacing(1),
     textAlign: 'center',
     color: theme.palette.text.secondary,
-    whiteSpace: 'nowrap',
+    whiteSpace: 'wrap',
     marginBottom: theme.spacing(1),
     backgroundColor: "#000000",
   },
@@ -128,6 +128,14 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
+const actions = [
+  { icon: <FileCopyIcon />, name: 'Copy' },
+  { icon: <SaveIcon />, name: 'Save' },
+  { icon: <PrintIcon />, name: 'Print' },
+  { icon: <ShareIcon />, name: 'Share' },
+  { icon: <FavoriteIcon />, name: 'Like' },
+];
+
 const theme = createMuiTheme({
   palette: {
     primary: { 500: '#00211B' }, // custom color in hex 
@@ -148,6 +156,20 @@ export const GardenActions = () => {
     const {username} = useContext(StateContext);
     const classes = useStyles();
     const [value, setValue] = React.useState(0);
+    const [open, setOpen] = React.useState(false);
+    const [hidden, setHidden] = React.useState(false);
+
+    const handleVisibility = () => {
+      setHidden((prevHidden) => !prevHidden);
+    };
+  
+    const handleOpen = () => {
+      setOpen(true);
+    };
+  
+    const handleClose = () => {
+      setOpen(false);
+    };
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -275,23 +297,28 @@ export const GardenActions = () => {
         </Tabs>
       </AppBar>      
       <TabPanel value={value} index={0} className={classes.background}>
-            <Grid item xs>
+            <Grid item xs={3}>
             <Box boxShadow={4}>
               <Paper className={classes.paperBrown}>
             <ThemeProvider theme={theme}>
-            
-              <Typography gutterBottom variant="h3" component="h3" className={classes.font}>
-                gem
-                </Typography>
+              <DiamondCard />
                 </ThemeProvider>
-                <hr/>
+                </Paper>
+                </Box>
+              </Grid>
+              <Grid item xs>
+            <Box boxShadow={4}>
+              <Paper className={classes.paperBrown}>
+            <ThemeProvider theme={theme}>
+              <DiamondTable />
+                </ThemeProvider>
                 </Paper>
                 </Box>
               </Grid>
               </TabPanel>
               
               <TabPanel value={value} index={1}>
-               <Grid item xs={12}>
+               <Grid item xs={6}>
             <Box boxShadow={4}>
               <Paper className={classes.paperBrown}>
             <ThemeProvider theme={theme}>
@@ -334,17 +361,35 @@ export const GardenActions = () => {
                         </Grid>
                       </TabPanel>
                     </Grid>
-                    <Grid item xs={2}>
-                      </Grid>
-                      </Grid>
-                      <br/>
-                      
-                      
-                      </div>
-                    </StyleRoot>
-                    </div>
-                    
-                  );
+                    <Grid item xs={3}>
+                    <div className={classes.dialroot}>
+      <SpeedDial
+        ariaLabel="SpeedDial openIcon example"
+        className={classes.speedDial}
+        hidden={hidden}
+        icon={<SpeedDialIcon openIcon={<EditIcon />} />}
+        onClose={handleClose}
+        onOpen={handleOpen}
+        open={open}
+        direction='down'
+      >
+        {actions.map((action) => (
+          <SpeedDialAction
+            key={action.name}
+            icon={action.icon}
+            tooltipTitle={action.name}
+            onClick={handleClose}
+          />
+        ))}
+      </SpeedDial>
+    </div>
+    </Grid>
+    </Grid>
+    <br/> 
+    </div>
+    </StyleRoot>
+    </div>
+    );
 };
 
 export default withRouter(GardenActions);

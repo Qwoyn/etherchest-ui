@@ -2,6 +2,7 @@ import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import { Link as RouterLink } from 'react-router-dom';
 import IconButton from '@material-ui/core/IconButton';
+import { AppInlineProfile } from '../AppInlineProfile';
 import SeedIcon from './Icons';
 import {  FarmTopbarIcon, 
           SteemSVGIcon, 
@@ -27,19 +28,24 @@ const useStyles = makeStyles(theme => ({
     },
     paperBrown: {
       padding: theme.spacing(1),
-      textAlign: 'center',
+      textAlign: 'left',
       color: theme.palette.text.secondary,
-      whiteSpace: 'nowrap',
+      whiteSpace: 'wrap',
       marginBottom: theme.spacing(1),
-      backgroundColor: "#532C0C",
+      backgroundColor: "#000000",
     },
     font: {
       fontFamily: '"Orbitron", sans-serif',
     },
     fontblack: {
       fontFamily: '"Orbitron", sans-serif',
-      color: "#637397"
+      color: "#e1c58b"
+
     },
+    title: {
+      fontSize:9,
+      fontFamily: '"Orbitron", sans-serif'
+    }
   }));
 
 const theme = createMuiTheme({
@@ -65,9 +71,9 @@ export default function DesktopTopbar(){
     return (
 <div className="layout-topbar clearfix">
 <Grid container spacing={0}>
-    <Grid item xs={6}>
+    <Grid item xs>
         <Grid container spacing={0}>
-            <Grid item xs={1}>
+            <Grid item xs={2}>
             <HtmlTooltip
               title={
                 <React.Fragment>
@@ -83,14 +89,20 @@ export default function DesktopTopbar(){
             </HtmlTooltip>
             </Grid>
 
-            <Grid item xs={1}>
-            
-            <IconButton className="layout-menu-button" disabled="true">
+              <Grid item xs={6}>  
+              <IconButton className="layout-menu-button" disabled="true">
             <Typography className={classes.fontblack}>Etherchest.com</Typography>
+            
             </IconButton>
+            <IconButton className="layout-menu-button" disabled="true">
+            <Typography className={classes.title} gutterBottom>
+          ETH 2.0
+        </Typography>
+        </IconButton>
             </Grid> 
         </Grid>
     </Grid>
+    <AppInlineProfile />
 </Grid>
 </div> 
     );
