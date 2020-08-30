@@ -1,6 +1,6 @@
 import React, {useContext} from "react";
 import {StateContext} from "../App";
-import GardenActions from './GardenPage/GardenActions.js';
+import GardenActions from './GardenActions.js';
 import GrowJournal from './GardenPage/GrowJournal';
 import { Parallax } from 'react-parallax';
 import { makeStyles } from '@material-ui/core/styles';

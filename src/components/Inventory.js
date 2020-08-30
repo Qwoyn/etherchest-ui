@@ -1,5 +1,5 @@
 import React from "react";
-import { gardenNames, seedNames, gardenLinkNames, seedLinkNames } from "../../service/HashkingsAPI";
+import { gardenNames, seedNames, gardenLinkNames, seedLinkNames } from "../service/HashkingsAPI";
 import {  makeStyles, withStyles, useTheme } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Badge from '@material-ui/core/Badge';
@@ -12,7 +12,7 @@ import { Link as RouterLink } from 'react-router-dom';
 import Link from '@material-ui/core/Link';
 import Tooltip from '@material-ui/core/Tooltip';
 import Zoom from '@material-ui/core/Zoom';
-import { FarmIcon, SubdivisionIcon, SeedSvgIcon, DnaIcon, BongIcon, GiftIcon, LandIcon, SeedIcon } from '../Icons';
+import { FarmIcon, SubdivisionIcon, SeedSvgIcon, DnaIcon, BongIcon, GiftIcon, LandIcon, SeedIcon } from './Icons';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import BuildTwoToneIcon from '@material-ui/icons/BuildTwoTone';
 import ExpansionPanel from '@material-ui/core/ExpansionPanel';
