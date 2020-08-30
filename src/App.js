@@ -3,60 +3,8 @@ import classNames from "classnames";
 import {AppTopbar} from "./AppTopbar";
 import {AppMenu} from "./AppMenu";
 import {Route} from "react-router-dom";
-import {Partners} from "./components/Partners";
-import {LoginPage} from "./components/LoginPage";
-import {GardenPage} from "./components/GardenPage";
-import {MarketPlots} from "./components/MarketPlots";
-import {MarketSeeds} from "./components/MarketSeeds";
-import {MarketSupplies} from "./components/MarketSupplies";
 import {ScrollPanel} from "primereact/components/scrollpanel/ScrollPanel";
-import {TwitchStreams} from './components/TwitchStreams.js';
-import { BoardMemberApp } from "./components/BoardMemberApp";
 import { HomePage } from "./components/HomePage";
-
-import { MazariSharif } from "./components/seeds/MazariSharif";
-import { PanamaRed } from "./components/seeds/PanamaRed";
-import { SwaziGold } from "./components/seeds/SwaziGold";
-import { ColombianGold } from "./components/seeds/ColombianGold";
-import { Malawi } from "./components/seeds/Malawi";
-import { Kilimanjaro } from "./components/seeds/Kilimanjaro";
-import { KingsBread } from "./components/seeds/KingsBread";
-import { AcapulcoGold } from "./components/seeds/AcapulcoGold";
-import { LambsBread } from "./components/seeds/LambsBread";
-import { HinduKush } from "./components/seeds/HinduKush";
-import { DurbanPoison } from "./components/seeds/DurbanPoison";
-import { ChocolateThai } from "./components/seeds/ChocolateThai";
-import { Thai } from "./components/seeds/Thai";
-import { Afghani } from "./components/seeds/Afghani";
-import { LashkarGah } from "./components/seeds/LashkarGah";
-import { Aceh } from "./components/seeds/Aceh";
-import { SteemOG } from "./components/seeds/SteemOG";
-
-import Afghanistan from './components/seeds/Afghanistan';
-import Africa from './components/seeds/Africa';
-import Jamaica from './components/seeds/Jamaica';
-import CentralAmerica from './components/seeds/CentralAmerica';
-import Asia from './components/seeds/Asia';
-import Mexico from './components/seeds/Mexico';
-
-import { MazariSharifpollen } from "./components/seeds/MazariSharifpollen";
-import { PanamaRedpollen } from "./components/seeds/PanamaRedpollen";
-import { SwaziGoldpollen } from "./components/seeds/SwaziGoldpollen";
-import { ColombianGoldpollen } from "./components/seeds/ColombianGoldpollen";
-import { Malawipollen } from "./components/seeds/Malawipollen";
-import { Kilimanjaropollen } from "./components/seeds/Kilimanjaropollen";
-import { KingsBreadpollen } from "./components/seeds/KingsBreadpollen";
-import { AcapulcoGoldpollen } from "./components/seeds/AcapulcoGoldpollen";
-import { LambsBreadpollen } from "./components/seeds/LambsBreadpollen";
-import { HinduKushpollen } from "./components/seeds/HinduKushpollen";
-import { DurbanPoisonpollen } from "./components/seeds/DurbanPoisonpollen";
-import { ChocolateThaipollen } from "./components/seeds/ChocolateThaipollen";
-import { Thaipollen } from "./components/seeds/Thaipollen";
-import { Afghanipollen } from "./components/seeds/Afghanipollen";
-import { LashkarGahpollen } from "./components/seeds/LashkarGahpollen";
-import { Acehpollen } from "./components/seeds/Acehpollen";
-
-import GiftSeed from "./components/GiftSeed";
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import "primereact/resources/themes/nova-light/theme.css";
 import "primereact/resources/primereact.min.css";
@@ -66,13 +14,7 @@ import "fullcalendar/dist/fullcalendar.css";
 import "./layout/layout.css";//                                     .
 import "./App.scss";//                                              M
 import steemConnectAPI from "./service/SteemConnectAPI";//         dM     
-import SCCallback from "./components/SCCallback";//                MMr
-import UserGarden from "./components/UserGarden";//               4MMML
-import FAQPage from "./components/FAQPage";//                     MMMMM.                xf     
-import Tutorial from "./components/Tutorial";//   .              "MMMMM               .MM-     
-import Stats from "./components/Stats";//          Mh..          +MMMMMM            .MMMM                                   
 import ReactGA from 'react-ga';//                  .MMM.         .MMMMML.          MMMMMh      
-import Trending from './components/Trending';//     )MMMh.        MMMMMM         MMMMMMM       
 //                                                   3MMMMx.     'MMMMMMf      xnMMMMMM"       
 const trackingID ="UA-111263990-4"//                 '*MMMMM      MMMMMM.     nMMMMMMP"        
 //                                                     *MMMMMx    "MMMMM\    .MMMMMMM=         

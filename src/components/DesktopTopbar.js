@@ -1,8 +1,8 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
-import {AppInlineProfile} from "../AppInlineProfile";
 import { Link as RouterLink } from 'react-router-dom';
 import IconButton from '@material-ui/core/IconButton';
+import SeedIcon from './Icons';
 import {  FarmTopbarIcon, 
           SteemSVGIcon, 
           BlogIcon, 
@@ -34,7 +34,11 @@ const useStyles = makeStyles(theme => ({
       backgroundColor: "#532C0C",
     },
     font: {
-      fontFamily: '"Jua", sans-serif',
+      fontFamily: '"Orbitron", sans-serif',
+    },
+    fontblack: {
+      fontFamily: '"Orbitron", sans-serif',
+      color: "#637397"
     },
   }));
 
@@ -63,61 +67,29 @@ export default function DesktopTopbar(){
 <Grid container spacing={0}>
     <Grid item xs={6}>
         <Grid container spacing={0}>
-            
             <Grid item xs={1}>
             <HtmlTooltip
               title={
                 <React.Fragment>
-                  <Typography color="error" className={classes.font}>Find your staking information</Typography>
+                  <Typography className={classes.font}>Exit Demo</Typography>
                 </React.Fragment>
               }
               placement="top"
               TransitionComponent={Zoom}
-              >
-            <Typography color="error" className={classes.font}>Etherchest.com</Typography>
-            </HtmlTooltip>
-            </Grid>
-
-            {/*<Grid item xs={1}>
-            <HtmlTooltip
-              title={
-                <React.Fragment>
-                  <Typography color="error" className={classes.font}>Starter Seeds</Typography>
-                </React.Fragment>
-              }
-              placement="top"
-              TransitionComponent={Zoom}
-              >
-            <IconButton className="layout-menu-button" component={Link1} to="/market/seedbank">
-            <SeedIcon />
-            </IconButton>
-            </HtmlTooltip>
-            </Grid> */}
-            
-            {/*<Grid item xs={1}>
-            <HtmlTooltip
-              title={
-                <React.Fragment>
-                  <Typography color="error" className={classes.font}>What is STEEM?</Typography>
-                </React.Fragment>
-              }
-              placement="top"
-              TransitionComponent={Zoom}
-              >
-            <a href="https://steemit.com/faq.html" target="_default">    
+              >   
             <IconButton className="layout-menu-button">
             <SteemSVGIcon />
             </IconButton>
-            </a>
             </HtmlTooltip>
-            </Grid> */}
-                        
+            </Grid>
+
+            <Grid item xs={1}>
+            
+            <IconButton className="layout-menu-button" disabled="true">
+            <Typography className={classes.fontblack}>Etherchest.com</Typography>
+            </IconButton>
+            </Grid> 
         </Grid>
-    </Grid>
-    <Grid item xs={6}>
-        <div className="layout-topbar-icons button">
-            <AppInlineProfile />
-        </div>
     </Grid>
 </Grid>
 </div> 

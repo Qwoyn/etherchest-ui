@@ -38,7 +38,7 @@ const useStyles = makeStyles(theme => ({
     color: theme.palette.text.secondary,
     whiteSpace: 'nowrap',
     marginBottom: theme.spacing(1),
-    backgroundColor: "#000E0E",
+    backgroundColor: "#283A65",
   },
   font: {
     fontFamily: '"Orbitron", sans-serif',

@@ -1,8 +1,6 @@
 import React, {useContext} from "react";
 import {StateContext} from "../App";
-import GardenActions from './GardenPage/GardenActions.js';
-import GrowJournal from './GardenPage/GrowJournal';
-import { Parallax } from 'react-parallax';
+import GardenActions from './GardenActions';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
  
@@ -30,14 +28,11 @@ export const HomePage = (user) => {
 
     return (
       <div className={classes.root}>
-       
           <br/>
           <Container>
           <GardenActions />
-          <GrowJournal />
           </Container>
           <br/>
-       
       </div>
     );
   

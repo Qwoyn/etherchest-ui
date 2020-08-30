@@ -1,20 +1,10 @@
 import React, {useContext, useState, useEffect} from "react";
 import {withRouter} from "react-router-dom";
-import { HashkingsAPI } from "../../service/HashkingsAPI";
-import {StateContext} from "../../App";
-import PlantModal from "../PlantModal";
-import PollinateModal from "../PollinateModal";
-import WaterModal from "../WaterModal";
-import CraftOilModal from "../OilModal"
-import HarvestModal from "../HarvestModal";
-import KiefModal from "../KiefModal";
-import BluntModal from "../BluntModal";
-import JointModal from "../JointModal";
-import Inventory from "./Inventory.js";
+import { HashkingsAPI } from "../service/HashkingsAPI";
+import {StateContext} from "../App";
 import { createMuiTheme, makeStyles, withStyles } from '@material-ui/core/styles';
 import Tooltip from '@material-ui/core/Tooltip';
 import Zoom from '@material-ui/core/Zoom';
-import Fab from '@material-ui/core/Fab';
 import Typography from '@material-ui/core/Typography';
 import { ThemeProvider } from '@material-ui/styles';
 import Grid from '@material-ui/core/Grid';
@@ -35,9 +25,8 @@ import { WaterIcon,
          CraftingIcon, 
          CrystalIcon,
          DippedIcon, 
-         BluntIcon } from '../Icons';
+         BluntIcon } from './Icons';
 import Box from '@material-ui/core/Box';
-import SeedGifting from '../seeds/SeedGifting.js';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import AppBar from '@material-ui/core/AppBar';
@@ -264,10 +253,12 @@ export const GardenActions = () => {
           <StyleRoot>
           <div style={styles.slideInLeft2}>
           <Grid container spacing={1}>
-          <Grid item xs={5}>
+          
+
+          
           <AppBar position="static" color='transparent'>
           <Typography className={classes.title} variant="h5">
-            Owned NFTs
+            Your Chest
           </Typography>
         <Tabs
           value={value}
@@ -289,7 +280,7 @@ export const GardenActions = () => {
             <ThemeProvider theme={theme}>
             
               <Typography gutterBottom variant="h3" component="h3" className={classes.font}>
-                Cubbys
+                gem
                 </Typography>
 
                 </ThemeProvider>
@@ -344,7 +335,7 @@ export const GardenActions = () => {
                         </Box>
                         </Grid>
                       </TabPanel>
-                      </Grid>
+                    
                       </Grid>
                       <br/>
                       
