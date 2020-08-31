@@ -54,7 +54,7 @@ const state = {
            'Onys', 'Obsidian'],
   datasets: [
     {
-      label: 'Rainfall',
+      label: 'NFT',
       backgroundColor: [
         '#B21F00',
         '#C9DE00',
@@ -133,7 +133,7 @@ const useStyles = makeStyles(theme => ({
     color: theme.palette.text.secondary,
     whiteSpace: 'wrap',
     marginBottom: theme.spacing(1),
-    backgroundColor: "#000000",
+    backgroundColor: "#100d00",
   },
   paperRed: {
     padding: theme.spacing(1),
@@ -145,7 +145,7 @@ const useStyles = makeStyles(theme => ({
   },
   font: {
     fontFamily: '"Orbitron", sans-serif',
-    color: "#DFB17B"
+    color: "#6d4f12"
   },
   tabs: {
     borderRight: `1px solid ${theme.palette.divider}`,
@@ -155,13 +155,13 @@ const useStyles = makeStyles(theme => ({
     height: 500,
   },
   background: {
-    backgroundColor: "#02091b"
+    backgroundColor: "#100d00"
   },
   title: {
     flexGrow: 1,
     alignSelf: 'flex-start',
     fontFamily: '"Orbitron", sans-serif',
-    color: "#000000",
+    color: "#6d4f12",
     
   },
 }));
@@ -350,7 +350,8 @@ export const GardenActions = () => {
             title:{
               display:true,
               text:'Portfolio Value (ETH)',
-              fontSize:20
+              fontSize:20,
+              fontColor:"#6d4f12",
             },
             legend:{
               display:false,
@@ -364,10 +365,10 @@ export const GardenActions = () => {
           </Grid>
           <Grid item xs>
           <AppBar position="static" color='transparent'>
-          <Typography className={classes.title} variant="h6" wrap>
+          <Typography className={classes.title} variant="h5" wrap>
             <b>Current Assets</b>
           </Typography>
-          <hr/>
+          
         <Tabs
           value={value}
           onChange={handleChange}

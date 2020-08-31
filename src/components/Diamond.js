@@ -9,7 +9,7 @@ import Grid from '@material-ui/core/Grid';
 const useStyles = makeStyles((theme) => ({
   root: {
     maxWidth: 345,
-    backgroundColor: "#392968",
+    backgroundColor: "#B21F00",
   },
   media: {
     height: 0,

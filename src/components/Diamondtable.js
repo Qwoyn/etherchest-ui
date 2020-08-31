@@ -192,6 +192,7 @@ const useStyles = makeStyles(theme => ({
   paper: {
     width: '100%',
     marginBottom: theme.spacing(2),
+    fontFamily: '"Orbitron", sans-serif',
   },
   table: {
     minWidth: 100,
@@ -213,6 +214,9 @@ const useStyles = makeStyles(theme => ({
   color: {
     color: '#ffffff',
   },
+  font: {
+    fontFamily: '"Orbitron", sans-serif',
+  }
 }));
 
 export default function DiamondTable() {
@@ -304,8 +308,9 @@ export default function DiamondTable() {
                       onClick={event => handleClick(event, row.name)}
                       tabIndex={-1}
                       key={row.name}
+                      className={classes.font}
                     >
-                      <TableCell padding="checkbox">
+                      <TableCell padding="checkbox" className={classes.font}>
                       </TableCell>
                       <TableCell scope="row" padding="none">
                         {row.name}
