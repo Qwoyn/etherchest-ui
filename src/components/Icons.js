@@ -410,9 +410,9 @@ export function WaterIcon(props) {
       );
     }
 
-    export function SteemIcon() {
+    export function EtherchestIcon() {
       return(
-    <img src="https://i.imgur.com/ICnn2By.png"></img>
+    <img src="https://i.imgur.com/Y8cMJ8O.png"></img>
       );
     }
 

@@ -13,11 +13,11 @@ import { ParallaxProvider } from 'react-scroll-parallax';
 const theme = createMuiTheme({
   palette: {
     background: {
-      default: "#3f444a"
+      default: "#132249"
     }
   }
 });
-  
+
 ReactDOM.render(
   <BrowserRouter>
     <ScrollToTop>

@@ -12,6 +12,7 @@ import Paper from '@material-ui/core/Paper';
 import { slideInLeft } from 'react-animations';
 import Radium, {StyleRoot} from 'radium';
 import { fadeIn } from 'react-animations';
+import {Line} from 'react-chartjs-2';
 import DiamondCard from './Diamond.js';
 import { slideInRight } from 'react-animations';
 import { WaterIcon, 
@@ -36,6 +37,7 @@ import Button from '@material-ui/core/Button';
 import SpeedDial from '@material-ui/lab/SpeedDial';
 import SpeedDialIcon from '@material-ui/lab/SpeedDialIcon';
 import SpeedDialAction from '@material-ui/lab/SpeedDialAction';
+import AccountBalanceWalletIcon from '@material-ui/icons/AccountBalanceWallet';
 import FileCopyIcon from '@material-ui/icons/FileCopyOutlined';
 import SaveIcon from '@material-ui/icons/Save';
 import PrintIcon from '@material-ui/icons/Print';
@@ -43,6 +45,50 @@ import ShareIcon from '@material-ui/icons/Share';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import EditIcon from '@material-ui/icons/Edit';
 import DiamondTable from "./Diamondtable";
+import DiamondTabInfo from "./DiamondTabInfo";
+import {Doughnut} from 'react-chartjs-2';
+import DepositTable from "./DepositTable";
+
+const state = {
+  labels: ['Diamond', 'Ruby', 'Saphire',
+           'Onys', 'Obsidian'],
+  datasets: [
+    {
+      label: 'Rainfall',
+      backgroundColor: [
+        '#B21F00',
+        '#C9DE00',
+        '#2FDE00',
+        '#00A6B4',
+        '#6800B4'
+      ],
+      hoverBackgroundColor: [
+      '#501800',
+      '#4B5000',
+      '#175000',
+      '#003350',
+      '#35014F'
+      ],
+      data: [10, 15, 25, 20, 30]
+    }
+  ]
+}
+
+const state2 = {
+  labels: ['Apri', 'May', 'June',
+           'July', 'August'],
+  datasets: [
+    {
+      label: 'ETH',
+      fill: false,
+      lineTension: 0.5,
+      backgroundColor: 'rgba(75,192,192,1)',
+      borderColor: 'rgba(0,0,0,1)',
+      borderWidth: 2,
+      data: [1, 2, 1.7, 1.9, 2, 2.8, 4]
+    }
+  ]
+}
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -67,20 +113,12 @@ TabPanel.propTypes = {
   value: PropTypes.any.isRequired,
 };
 
-function a11yProps(index) {
-  return {
-    id: `scrollable-prevent-tab-${index}`,
-    'aria-controls': `scrollable-prevent-tabpanel-${index}`,
-  };
-}
-
-
 const useStyles = makeStyles(theme => ({
   button: {
     margin: theme.spacing(1),
   },
   dialroot: {
-    height: 380,
+    height: 200,
     transform: 'translateZ(0px)',
     flexGrow: 1,
   },
@@ -117,7 +155,7 @@ const useStyles = makeStyles(theme => ({
     height: 500,
   },
   background: {
-    backgroundColor: "#000000"
+    backgroundColor: "#02091b"
   },
   title: {
     flexGrow: 1,
@@ -129,11 +167,11 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const actions = [
-  { icon: <FileCopyIcon />, name: 'Copy' },
-  { icon: <SaveIcon />, name: 'Save' },
-  { icon: <PrintIcon />, name: 'Print' },
-  { icon: <ShareIcon />, name: 'Share' },
-  { icon: <FavoriteIcon />, name: 'Like' },
+  { icon: <AccountBalanceWalletIcon />, name: 'Connect Metamask' },
+  { icon: <AccountBalanceWalletIcon />, name: 'Save' },
+  { icon: <AccountBalanceWalletIcon />, name: 'Print' },
+  { icon: <AccountBalanceWalletIcon />, name: 'Share' },
+  { icon: <AccountBalanceWalletIcon />, name: 'Like' },
 ];
 
 const theme = createMuiTheme({
@@ -175,6 +213,13 @@ export const GardenActions = () => {
     setValue(newValue);
   };
   
+  function a11yProps(index) {
+    return {
+      id: `scrollable-prevent-tab-${index}`,
+      'aria-controls': `scrollable-prevent-tabpanel-${index}`,
+    };
+  }
+
     const [dashboardStats, setDashboardStats] = useState({
       gardeners: 0,
       gardens: 0,
@@ -267,12 +312,62 @@ export const GardenActions = () => {
         <div className={classes.flex}>
           <StyleRoot>
           <div>
+          <Typography className={classes.title} variant="h3">
+          <img src="https://i.imgur.com/BuBdO1Z.png" />  <b>Your Dashboard</b>
+          </Typography> 
+          
+          <hr/>
+          <br/>
+          <br/>
           <Grid container spacing={1}>
           <Grid item xs>
-          <AppBar position="static" color='transparent'>
           <Typography className={classes.title} variant="h5">
-            Your Chest
+            <b>Portfolio Distribution</b>
           </Typography>
+        <hr/>
+        <Paper className={classes.paperBrown}>
+        <Doughnut
+          data={state}
+          options={{
+            title:{
+              display:false,
+              text:'Asset Distribution',
+              fontSize:20
+            },
+            legend:{
+              display:true,
+              position:'left'
+            }
+          }}
+        />
+        <br/>
+      
+        </Paper>
+        <Paper className={classes.paperBrown}>
+        <Line
+          data={state2}
+          options={{
+            title:{
+              display:true,
+              text:'Portfolio Value (ETH)',
+              fontSize:20
+            },
+            legend:{
+              display:false,
+              position:'right'
+            }
+          }}
+        />
+        <br/>
+      
+        </Paper>
+          </Grid>
+          <Grid item xs>
+          <AppBar position="static" color='transparent'>
+          <Typography className={classes.title} variant="h6" wrap>
+            <b>Current Assets</b>
+          </Typography>
+          <hr/>
         <Tabs
           value={value}
           onChange={handleChange}
@@ -290,22 +385,32 @@ export const GardenActions = () => {
               placement="left"
               TransitionComponent={Zoom}
               >
-          <Tab icon={<FarmingIcon />} aria-label="cubby" {...a11yProps(0)} />
+          <Tab icon={<FarmingIcon />} aria-label="diamond" {...a11yProps(0)} />
           </HtmlTooltip>
           <Tab icon={<CraftingIcon />} aria-label="drawer" {...a11yProps(1)} />
           <Tab icon={<GiftIcon />} aria-label="chest" {...a11yProps(2)} />
         </Tabs>
       </AppBar>      
       <TabPanel value={value} index={0} className={classes.background}>
-            <Grid item xs={3}>
-            <Box boxShadow={4}>
-              <Paper className={classes.paperBrown}>
+            <Grid container spacing={1}>
+            <Grid item xs>
+      
+             
             <ThemeProvider theme={theme}>
               <DiamondCard />
                 </ThemeProvider>
-                </Paper>
-                </Box>
+    
               </Grid>
+              
+              <Grid item xs>
+              <Paper className={classes.paperBrown}>
+            <ThemeProvider theme={theme}>
+            <DiamondTabInfo />
+                </ThemeProvider>
+                </Paper>
+              </Grid>
+              </Grid>
+
               <Grid item xs>
             <Box boxShadow={4}>
               <Paper className={classes.paperBrown}>
@@ -317,33 +422,6 @@ export const GardenActions = () => {
               </Grid>
               </TabPanel>
               
-              <TabPanel value={value} index={1}>
-               <Grid item xs={6}>
-            <Box boxShadow={4}>
-              <Paper className={classes.paperBrown}>
-            <ThemeProvider theme={theme}>
-            <HtmlTooltip
-              title={
-                <React.Fragment>
-                  <Typography color="error" className={classes.font}><u>Craft Items</u></Typography>
-                  <b>{"This is where you create items with your buds!"}</b>
-                </React.Fragment>
-              }
-              placement="top"
-              TransitionComponent={Zoom}
-              >
-              <Typography gutterBottom variant="h3" component="h3" className={classes.font}>
-                Drawers
-                </Typography>
-                </HtmlTooltip>
-                </ThemeProvider>
-                <hr/>
-                </Paper>
-                </Box>
-              </Grid>
-
-             
-              </TabPanel>
 
               <TabPanel value={value} index={2}>
                         <Grid item xs={12}>
@@ -361,31 +439,11 @@ export const GardenActions = () => {
                         </Grid>
                       </TabPanel>
                     </Grid>
-                    <Grid item xs={3}>
-                    <div className={classes.dialroot}>
-      <SpeedDial
-        ariaLabel="SpeedDial openIcon example"
-        className={classes.speedDial}
-        hidden={hidden}
-        icon={<SpeedDialIcon openIcon={<EditIcon />} />}
-        onClose={handleClose}
-        onOpen={handleOpen}
-        open={open}
-        direction='down'
-      >
-        {actions.map((action) => (
-          <SpeedDialAction
-            key={action.name}
-            icon={action.icon}
-            tooltipTitle={action.name}
-            onClick={handleClose}
-          />
-        ))}
-      </SpeedDial>
-    </div>
     </Grid>
-    </Grid>
+    <br/>
+    <hr/>
     <br/> 
+    <DepositTable />
     </div>
     </StyleRoot>
     </div>

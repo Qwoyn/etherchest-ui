@@ -3,7 +3,8 @@ import Grid from '@material-ui/core/Grid';
 import { Link as RouterLink } from 'react-router-dom';
 import IconButton from '@material-ui/core/IconButton';
 import { AppInlineProfile } from '../AppInlineProfile';
-import SeedIcon from './Icons';
+import Button from '@material-ui/core/Button';
+import SeedIcon, { EtherchestIcon } from './Icons';
 import {  FarmTopbarIcon, 
           SteemSVGIcon, 
           BlogIcon, 
@@ -20,7 +21,6 @@ import Tooltip from '@material-ui/core/Tooltip';
 import { createMuiTheme, makeStyles, withStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Zoom from '@material-ui/core/Zoom';
-import { ExchangeIcon } from './Icons';
 
 const useStyles = makeStyles(theme => ({
     button: {
@@ -44,7 +44,8 @@ const useStyles = makeStyles(theme => ({
     },
     title: {
       fontSize:9,
-      fontFamily: '"Orbitron", sans-serif'
+      fontFamily: '"Orbitron", sans-serif',
+      color: "#211448"
     }
   }));
 
@@ -73,21 +74,7 @@ export default function DesktopTopbar(){
 <Grid container spacing={0}>
     <Grid item xs>
         <Grid container spacing={0}>
-            <Grid item xs={2}>
-            <HtmlTooltip
-              title={
-                <React.Fragment>
-                  <Typography className={classes.font}>Exit Demo</Typography>
-                </React.Fragment>
-              }
-              placement="top"
-              TransitionComponent={Zoom}
-              >   
-            <IconButton className="layout-menu-button">
-            <SteemSVGIcon />
-            </IconButton>
-            </HtmlTooltip>
-            </Grid>
+            
 
               <Grid item xs={6}>  
               <IconButton className="layout-menu-button" disabled="true">

@@ -25,19 +25,15 @@ function createData(name, calories, fat) {
 }
 
 const rows = [
-  createData('Cupcake', 305, 3.7, 67, 4.3),
-  createData('Donut', 452, 25.0, 51, 4.9),
-  createData('Eclair', 262, 16.0, 24, 6.0),
-  createData('Frozen yoghurt', 159, 6.0, 24, 4.0),
-  createData('Gingerbread', 356, 16.0, 49, 3.9),
-  createData('Honeycomb', 408, 3.2, 87, 6.5),
-  createData('Ice cream sandwich', 237, 9.0, 37, 4.3),
-  createData('Jelly Bean', 375, 0.0, 94, 0.0),
-  createData('KitKat', 518, 26.0, 65, 7.0),
-  createData('Lollipop', 392, 0.2, 98, 0.0),
-  createData('Marshmallow', 318, 0, 81, 2.0),
-  createData('Nougat', 360, 19.0, 9, 37.0),
-  createData('Oreo', 437, 18.0, 63, 4.0),
+  createData('1691', 1, '5/23/2021'),
+  createData('5532', 5, '1/6/2021'),
+  createData('1949', 2, '3/7/2021'),
+  createData('2221', 8, '5/6/2021'),
+  createData('6453', 12,'6/10/2021'),
+  createData('2497', 35,'1/1/2021'),
+  createData('0023', 3, '2/6/2021'),
+  createData('0135', 2, '7/12/2021'),
+  createData('0264', 0, '1/2/2021'),
 ];
 
 function desc(a, b, orderBy) {
@@ -66,7 +62,7 @@ function getSorting(order, orderBy) {
 
 const headCells = [
   { id: 'name', numeric: false, disablePadding: true, label: 'Token ID' },
-  { id: 'calories', numeric: true, disablePadding: false, label: 'Maturity' },
+  { id: 'calories', numeric: true, disablePadding: false, label: 'Age (m)' },
   { id: 'fat', numeric: true, disablePadding: false, label: 'Created On' },
 ];
 
@@ -225,7 +221,7 @@ export default function DiamondTable() {
   const [orderBy, setOrderBy] = React.useState('calories');
   const [selected, setSelected] = React.useState([]);
   const [page, setPage] = React.useState(0);
-  const [dense, setDense] = React.useState(false);
+  const [dense, setDense] = React.useState(true);
   const [rowsPerPage, setRowsPerPage] = React.useState(5);
 
   const handleRequestSort = (event, property) => {
@@ -321,7 +317,7 @@ export default function DiamondTable() {
                 })}
               {emptyRows > 0 && (
                 <TableRow style={{ height: (dense ? 33 : 53) * emptyRows }}>
-                  <TableCell colSpan={1} />
+                  <TableCell colSpan={1 } />
                 </TableRow>
               )}
             </TableBody>
@@ -345,7 +341,7 @@ export default function DiamondTable() {
       </Paper>
       <FormControlLabel
         control={<Switch checked={dense} onChange={handleChangeDense} />}
-        label="Dense padding"
+        label="Change Size"
         className={classes.color}
       />
     </div>

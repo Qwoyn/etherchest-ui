@@ -9,6 +9,8 @@ import { withStyles, makeStyles } from '@material-ui/core/styles';
 import { HashkingsAPI } from "./service/HashkingsAPI";
 import api from './service/SteemConnectAPI';
 import Modal from '@material-ui/core/Modal';
+import SpeedDialBar from "./components/SpeedDialBar";
+import Grid from '@material-ui/core/Grid';
 
 const access_token = localStorage.getItem("sc_token");
 
@@ -48,7 +50,7 @@ const HtmlTooltip = withStyles(theme => ({
 
 const useStyles = makeStyles(theme => ({
 font: {
-  fontFamily: '"Jua", sans-serif',
+  fontFamily: '"Orbiton", sans-serif',
 },
 paper: {
   position: 'absolute',
@@ -108,7 +110,8 @@ const logOut = () => {
   if (!username) {
     return (
       <div className="profile">
-        
+        <Grid containr spacing={1}>
+          <Grid xs>
         {/*<HtmlTooltip
               title={
                 <React.Fragment>
@@ -134,6 +137,12 @@ const logOut = () => {
         className={classes.font}
       />
       </Tooltip>
+      </Grid>
+
+      <Grid xs>
+      <SpeedDialBar />
+      </Grid>
+      </Grid>
       <br/>
     </div>
     );
