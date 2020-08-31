@@ -72,9 +72,16 @@ const useStyles = makeStyles(theme => ({
       flexGrow: 1,
       alignSelf: 'flex-start',
       fontFamily: '"Orbitron", sans-serif',
-      color: "#000000",
-      
+      color: "#6d4f12",
     },
+    paperBrown: {
+        padding: theme.spacing(1),
+        textAlign: 'center',
+        color: theme.palette.text.secondary,
+        whiteSpace: 'wrap',
+        marginBottom: theme.spacing(1),
+        backgroundColor: "#100d00",
+      },
   }));
 
 function createData(name, calories, fat, carbs, protein, price) {
