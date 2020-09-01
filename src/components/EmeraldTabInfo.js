@@ -33,7 +33,7 @@ export default function EmeraldTabInfo() {
             Emerald Stake
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            Number of Diamonds:   10
+            Number of Emeralds:   10
           </Typography>
           <hr/>
           <Typography variant="body2" color="textSecondary" component="p">
