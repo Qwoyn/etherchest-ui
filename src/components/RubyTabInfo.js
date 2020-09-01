@@ -15,7 +15,7 @@ const useStyles = makeStyles({
   },
 });
 
-export default function DiamondTabInfo() {
+export default function RubyTabInfo() {
   const classes = useStyles();
 
   return (
@@ -25,19 +25,19 @@ export default function DiamondTabInfo() {
           component="img"
           alt="Contemplative Reptile"
           height="140"
-          image="https://wiki.geministation.com/images/4/47/Polished_Diamond.png"
+          image="https://blog.udemy.com/wp-content/uploads/2012/01/rubylang.png"
           title="Contemplative Reptile"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
-            Diamond Stake
+            Ruby Stake
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            Number of Diamonds:   5
+            Number of Rubys:   30
           </Typography>
           <hr/>
           <Typography variant="body2" color="textSecondary" component="p">
-            Value:   5 ETH
+            Value:   2 ETH
           </Typography>
         </CardContent>
         <CardActions>
@@ -45,7 +45,7 @@ export default function DiamondTabInfo() {
         Send
         </Button>
         <Button variant="contained" color="primary">
-        Get Diamonds
+        Get Rubys
         </Button>
         </CardActions>
       </CardActionArea>

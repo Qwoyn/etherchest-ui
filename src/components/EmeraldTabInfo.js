@@ -15,7 +15,7 @@ const useStyles = makeStyles({
   },
 });
 
-export default function DiamondTabInfo() {
+export default function EmeraldTabInfo() {
   const classes = useStyles();
 
   return (
@@ -25,19 +25,19 @@ export default function DiamondTabInfo() {
           component="img"
           alt="Contemplative Reptile"
           height="140"
-          image="https://wiki.geministation.com/images/4/47/Polished_Diamond.png"
+          image="https://pbs.twimg.com/profile_images/926216109791023104/_zMYwO9L_400x400.jpg"
           title="Contemplative Reptile"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
-            Diamond Stake
+            Emerald Stake
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            Number of Diamonds:   5
+            Number of Diamonds:   10
           </Typography>
           <hr/>
           <Typography variant="body2" color="textSecondary" component="p">
-            Value:   5 ETH
+            Chest Value:   1 ETH
           </Typography>
         </CardContent>
         <CardActions>
@@ -45,7 +45,7 @@ export default function DiamondTabInfo() {
         Send
         </Button>
         <Button variant="contained" color="primary">
-        Get Diamonds
+        Get Emeralds
         </Button>
         </CardActions>
       </CardActionArea>

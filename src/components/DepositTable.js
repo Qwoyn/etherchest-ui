@@ -38,14 +38,6 @@ const useStyles = makeStyles(theme => ({
       bottom: theme.spacing(2),
       right: theme.spacing(2),
     },
-    paperBrown: {
-      padding: theme.spacing(1),
-      textAlign: 'center',
-      color: theme.palette.text.secondary,
-      whiteSpace: 'wrap',
-      marginBottom: theme.spacing(1),
-      backgroundColor: "#000000",
-    },
     paperRed: {
       padding: theme.spacing(1),
       textAlign: 'center',
@@ -72,7 +64,7 @@ const useStyles = makeStyles(theme => ({
       flexGrow: 1,
       alignSelf: 'flex-start',
       fontFamily: '"Orbitron", sans-serif',
-      color: "#6d4f12",
+      color: "#977630",
     },
     paperBrown: {
         padding: theme.spacing(1),
@@ -189,9 +181,6 @@ export default function DepositTable() {
         <Typography className={classes.title} variant="h5">
             <b>Deposit Info</b>
           </Typography>
-          <Button variant="contained" color="primary" disableElevation>
-      Make a Deposit
-    </Button>
     <hr/>
     <br/>
     <TableContainer component={Paper}>

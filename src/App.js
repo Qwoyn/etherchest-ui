@@ -13,7 +13,7 @@ import "primeflex/primeflex.css";
 import "fullcalendar/dist/fullcalendar.css";
 import "./layout/layout.css";//                                     .
 import "./App.scss";//                                              M
-import steemConnectAPI from "./service/SteemConnectAPI";//         dM     
+//import steemConnectAPI from "./service/SteemConnectAPI";//         dM     
 import ReactGA from 'react-ga';//                  .MMM.         .MMMMML.          MMMMMh      
 //                                                   3MMMMx.     'MMMMMMf      xnMMMMMM"       
 const trackingID ="UA-111263990-4"//                 '*MMMMM      MMMMMM.     nMMMMMMP"        
@@ -33,11 +33,7 @@ ReactGA.ga('send', 'pageview', '/login');
 
 class App extends Component {
   constructor() {
-    const accessToken = localStorage.getItem("sc_token");
-
-    if (accessToken) {
-      steemConnectAPI.setAccessToken(accessToken);
-    }
+   
     super();
     this.state = {
       layoutMode: "static",
@@ -45,18 +41,6 @@ class App extends Component {
       staticMenuInactive: true,
       overlayMenuActive: true,
       mobileMenuActive: false,
-      localState: {
-        username: "",
-        login: username =>
-          this.setState(state => ({
-            localState: {
-              ...state.localState,
-              username
-            }
-          })),
-        steemConnectAPI,
-        loginType: undefined
-      }
     };
 
     this.onWrapperClick = this.onWrapperClick.bind(this);
@@ -178,20 +162,6 @@ class App extends Component {
     if (this.state.mobileMenuActive)
       this.addClass(document.body, "body-overflow-hidden");
     else this.removeClass(document.body, "body-overflow-hidden");
-  }
-
-  componentDidMount() {
-    if (!this.state.localState.username && localStorage.getItem("sc_token")) {
-      this.state.localState.steemConnectAPI
-        .me()
-        .then(res => {
-          this.state.localState.login(res.name);
-        })
-        .catch(e => {
-          console.log(e);
-          localStorage.removeItem("sc_token");
-        });
-    }
   }
 
   render() {

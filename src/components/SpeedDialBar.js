@@ -1,18 +1,15 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import Button from '@material-ui/core/Button';
 import SpeedDial from '@material-ui/lab/SpeedDial';
-import SpeedDialIcon from '@material-ui/lab/SpeedDialIcon';
 import SpeedDialAction from '@material-ui/lab/SpeedDialAction';
 import HttpsIcon from '@material-ui/icons/Https';
-import FileCopyIcon from '@material-ui/icons/FileCopyOutlined';
+//import FileCopyIcon from '@material-ui/icons/FileCopyOutlined';
 import ChatIcon from '@material-ui/icons/Chat';
-import SaveIcon from '@material-ui/icons/Save';
-import SendIcon from '@material-ui/icons/Send';
-import PrintIcon from '@material-ui/icons/Print';
+//import SaveIcon from '@material-ui/icons/Save';
+//import SendIcon from '@material-ui/icons/Send';
+//import PrintIcon from '@material-ui/icons/Print';
 import ShareIcon from '@material-ui/icons/Share';
 import FavoriteIcon from '@material-ui/icons/Favorite';
-import EditIcon from '@material-ui/icons/Edit';
 import DehazeIcon from '@material-ui/icons/Dehaze';
 import ArrowDropUpIcon from '@material-ui/icons/ArrowDropUp';
 import AccountBalanceWalletIcon from '@material-ui/icons/AccountBalanceWallet';
@@ -41,11 +38,9 @@ const actions = [
 export default function OpenIconSpeedDial() {
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
-  const [hidden, setHidden] = React.useState(false);
+  const [hidden] = React.useState(false);
 
-  const handleVisibility = () => {
-    setHidden((prevHidden) => !prevHidden);
-  };
+  
 
   const handleOpen = () => {
     setOpen(true);

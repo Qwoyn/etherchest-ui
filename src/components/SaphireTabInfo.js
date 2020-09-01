@@ -15,7 +15,7 @@ const useStyles = makeStyles({
   },
 });
 
-export default function DiamondTabInfo() {
+export default function SaphireTabInfo() {
   const classes = useStyles();
 
   return (
@@ -23,21 +23,21 @@ export default function DiamondTabInfo() {
       <CardActionArea>
         <CardMedia
           component="img"
-          alt="Contemplative Reptile"
+          alt="EtherChest Saphire"
           height="140"
-          image="https://wiki.geministation.com/images/4/47/Polished_Diamond.png"
-          title="Contemplative Reptile"
+          image="https://pngimg.com/uploads/sapphire/sapphire_PNG15.png"
+          title="Saphire"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
-            Diamond Stake
+            Saphire Stake
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            Number of Diamonds:   5
+            Number of Saphires:   15
           </Typography>
           <hr/>
           <Typography variant="body2" color="textSecondary" component="p">
-            Value:   5 ETH
+            Value:   7 ETH
           </Typography>
         </CardContent>
         <CardActions>
@@ -45,7 +45,7 @@ export default function DiamondTabInfo() {
         Send
         </Button>
         <Button variant="contained" color="primary">
-        Get Diamonds
+        Get Saphires
         </Button>
         </CardActions>
       </CardActionArea>
