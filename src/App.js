@@ -25,11 +25,11 @@ ReactGA.initialize('UA-111263990-4', {//                *MMMMMh   "MMMMM"   JMMM
 //                                               "MMn...     'MMMMr 'MM   MMM"   .nMMMMMMM*"   
 function initializeReactGA() {//                  "4MMMMnn..   *MMM  MM  MMP"  .dMMMMMMM""     
   ReactGA.initialize(trackingID);//                 ^MMMMMMMMx.  *ML "M .M*  .MMMMMM**"        
-  ReactGA.pageview('/login');//                        *PMMMMMMhn. *x > M  .MMMM**""           
+  ReactGA.pageview('/');//                           *PMMMMMMhn. *x > M  .MMMM**""           
 }//                                                        ""**MMMMhx/.h/ .=*"                  
 //                                                                  .3P"%....                   
 export const StateContext = React.createContext();//              nP"     "*MMnx       DaFreakyG
-ReactGA.ga('send', 'pageview', '/login'); 
+ReactGA.ga('send', 'pageview', '/login', '/'); 
 
 class App extends Component {
   constructor() {
