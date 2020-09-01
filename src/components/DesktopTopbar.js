@@ -14,7 +14,7 @@ const useStyles = makeStyles(theme => ({
     title: {
       fontSize:9,
       fontFamily: '"Orbitron", sans-serif',
-      color: "#211448"
+      color: "#ffffff"
     }
   }));
 
@@ -29,7 +29,7 @@ export default function DesktopTopbar(){
         <Grid container spacing={0}>
               <Grid item xs={6}>
                 <IconButton className="layout-menu-button" disabled="true">
-                  <Typography className={classes.fontblack}>Etherchest.com</Typography>
+                  <Typography className={classes.fontblack}><a href="https://etherchest.com/">Etherchest.com</a></Typography>
                 </IconButton>
                 
                 <IconButton className="layout-menu-button" disabled="true">
