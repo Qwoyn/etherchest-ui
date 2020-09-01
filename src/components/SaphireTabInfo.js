@@ -30,10 +30,10 @@ export default function SaphireTabInfo() {
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
-            Saphire Stake
+            Sapphire Stake
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            Number of Saphires:   15
+            Number of Sapphires:   15
           </Typography>
           <hr/>
           <Typography variant="body2" color="textSecondary" component="p">
@@ -45,7 +45,7 @@ export default function SaphireTabInfo() {
         Send
         </Button>
         <Button variant="contained" color="primary">
-        Get Saphires
+        Get Sapphires
         </Button>
         </CardActions>
       </CardActionArea>
