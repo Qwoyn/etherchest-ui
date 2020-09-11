@@ -13,7 +13,7 @@
 <div align="center">
   <h3>
     <a href="https://dashboard.etherchest.com/">
-      Webapp
+      dApp Dashboard
     </a>
     <span> | </span>
     <a href="https://twitter.com/etherchest">
@@ -22,6 +22,10 @@
     <span> | </span>
     <a href="https://discord.gg/P4NbDaV">
       Discord
+    </a>
+    <span> | </span>
+    <a href="https://etherchest.com">
+      Website
     </a>
   </h3>
 </div>
