@@ -8,6 +8,7 @@ import { withStyles, makeStyles } from '@material-ui/core/styles';
 import Modal from '@material-ui/core/Modal';
 import SpeedDialBar from "./components/SpeedDialBar";
 import Grid from '@material-ui/core/Grid';
+import MetaMaskLoginButton from 'react-metamask-login-button';
 
 const useStyles = makeStyles(theme => ({
 font: {
@@ -31,6 +32,11 @@ export const AppInlineProfile = () => {
       <div className="profile">
         <Grid containr spacing={1}>
           <Grid xs>
+        <Tooltip title="The Dashboard will go live when Mainnet launches" placement="left">
+        <MetaMaskLoginButton />
+      </Tooltip>
+      </Grid>
+      <Grid xs>
         <Tooltip title="The Dashboard will go live when Mainnet launches" placement="left">
       <Chip
         color="secondary"
